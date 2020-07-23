@@ -20,4 +20,14 @@ public class CustomerWhoBoughtAlsosHardcodedService {
     public List<CustomerWhoBoughtAlso> findAll() {
         return customerWhoBoughtAlsos;
     }
+
+    public CustomerWhoBoughtAlso findById(long id) {
+        for (CustomerWhoBoughtAlso customerWhoBoughtAlso : customerWhoBoughtAlsos) {
+            if (customerWhoBoughtAlso.getId() == id) {
+                return customerWhoBoughtAlso;
+            }
+        }
+        return null;
+    }
+
 }

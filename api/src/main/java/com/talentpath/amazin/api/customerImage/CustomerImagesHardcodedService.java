@@ -20,4 +20,13 @@ public class CustomerImagesHardcodedService {
     public List<CustomerImage> findAll() {
         return customerImages;
     }
+
+    public CustomerImage findById(long id) {
+        for (CustomerImage customerImage : customerImages) {
+            if (customerImage.getId() == id) {
+                return customerImage;
+            }
+        }
+        return null;
+    }
 }
