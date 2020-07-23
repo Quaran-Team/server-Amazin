@@ -3,16 +3,20 @@ import java.util.ArrayList;
 
 public class QAndA {
     private Long id;
-    private String otherIds;
+    private String question;
+    private String answers;
+    private int votes;
 
     public QAndA(){
 
     }
 
-    public QAndA(long id, String otherIds){
+    public QAndA(long id, String question, String answers, int votes){
         super();
         this.id = id;
-        this.otherIds = otherIds;
+        this.question = question;
+        this.answers = answers;
+        this.votes = votes;
     }
 
     public Long getId() {
@@ -23,19 +27,34 @@ public class QAndA {
         this.id = id;
     }
 
-    public String getOtherIds() {
-        return otherIds;
+    public String getQuestion() {
+        return question;
     }
 
-    public void setOtherIds( String otherIds) {
-        this.otherIds = otherIds;
+    public void setQuestion( String question) {
+        this.question = question;
+    }
+
+    public String getAnswers() {
+        return answers;
+    }
+
+    public void setAnswers(String answers) {
+        this.answers = answers;
+    }
+
+    public int getVotes() {
+        return votes;
+    }
+
+    public void setVotes(int votes) {
+        this.votes = votes;
     }
 
     @Override
     public int hashCode() {
         final int prime = 31;
         int result = 1;
-        result = prime * result + ((otherIds == null) ? 0 : otherIds.hashCode());
         result = prime * result + ((id == null) ? 0 : id.hashCode());
         return result;
     }
@@ -52,10 +71,10 @@ public class QAndA {
         }
         else if (!id.equals(other.id)) return false;
         // arrayOfOtherIds comparison
-        if (otherIds == null) {
-            if (other.otherIds != null) return false;
+        if (question == null) {
+            if (other.question != null) return false;
         }
-        else if (!otherIds.equals(other.otherIds)) return false;
+        else if (!question.equals(other.question)) return false;
         return true;
     }
 

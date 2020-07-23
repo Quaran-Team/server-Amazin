@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 @RestController
-public class QAndA {
+public class QAndAResource {
 
     @Autowired
     private QAndAsHardcodedService qAndAManagementService;
