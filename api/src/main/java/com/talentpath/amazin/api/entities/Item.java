@@ -20,36 +20,35 @@ import org.hibernate.annotations.Type;
 import org.hibernate.annotations.TypeDef;
 
 @Entity
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
+@Data // Lombok annotation; tells it to create getters and setters
+@AllArgsConstructor // lombok annotation to create constructor with all args
+@NoArgsConstructor // lombok annotation to create no-args constructor
 @DynamicInsert
 @TypeDef(name = "list-array", typeClass = ListArrayType.class)
 @Table(name = "items")
 public class Item {
     @Id
-    @Column(unique = true)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long item_id;
+    private long itemId;
 
     @NotBlank
-    private String item_name;
+    private String itemName;
 
     @NotNull
     @ColumnDefault("1.00")
     @Column(precision = 10, scale = 2)
-    private BigDecimal item_price;
+    private BigDecimal itemPrice;
 
     @NotBlank
     @ColumnDefault("long(er) product title/name")
-    private String item_title;
+    private String itemTitle;
 
     @NotBlank
     @Type(type = "list-array")
     @Column(name = "item_about", columnDefinition = "text[]")
-    private String[] item_about;
+    private String[] itemAbout;
 
     @NotBlank
     @ColumnDefault("This is a product, etc., etc.")
-    private String item_description;
+    private String itemDescription;
 }
