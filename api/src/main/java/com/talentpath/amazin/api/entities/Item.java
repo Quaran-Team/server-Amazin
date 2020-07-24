@@ -12,12 +12,19 @@ import javax.persistence.Table;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
+import com.vladmihalcea.hibernate.type.array.ListArrayType;
+
 import org.hibernate.annotations.ColumnDefault;
+import org.hibernate.annotations.DynamicInsert;
+import org.hibernate.annotations.Type;
+import org.hibernate.annotations.TypeDef;
 
 @Entity
 @Data // Lombok annotation; tells it to create getters and setters
 @AllArgsConstructor // lombok annotation to create constructor with all args
 @NoArgsConstructor // lombok annotation to create no-args constructor
+@DynamicInsert
+@TypeDef(name = "list-array", typeClass = ListArrayType.class)
 @Table(name = "items")
 public class Item {
     @Id
@@ -37,8 +44,9 @@ public class Item {
     private String itemTitle;
 
     @NotBlank
-    @ColumnDefault("this is a great product, it looks great")
-    private String itemAbout;
+    @Type(type = "list-array")
+    @Column(name = "item_about", columnDefinition = "text[]")
+    private String[] itemAbout;
 
     @NotBlank
     @ColumnDefault("This is a product, etc., etc.")
