@@ -12,12 +12,7 @@ import javax.persistence.Table;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
-import com.vladmihalcea.hibernate.type.array.ListArrayType;
-
-import org.hibernate.annotations.ColumnDefault;
 import org.hibernate.annotations.DynamicInsert;
-import org.hibernate.annotations.Type;
-import org.hibernate.annotations.TypeDef;
 
 @Entity
 @Data // Lombok annotation; tells it to create getters and setters
@@ -41,7 +36,7 @@ public class Item {
     private String itemTitle;
 
     @NotBlank
-    private String[] itemAbout;
+    private String itemAbout;
 
     @NotBlank
     private String itemDescription;
