@@ -34,7 +34,7 @@ VALUES (
         itemTitle
     )
 VALUES (
-        'Tech virtual drone online browser',
-        5432.12,
-        'Tech virtual drone online browser platform through in a system'
+        'Purple Moneky Dishwasher',
+        15.95,
+        'Purple Monkey Dishawaser Super Efficent Sanitary'
     )
