@@ -1,4 +1,4 @@
-INSERT INTO Items (
+INSERT INTO items (
     itemName,
     itemPrice,
     itemTitle,
@@ -13,7 +13,7 @@ VALUES (
     'This thing is a product, it works, etc. etc...'
 )
 
-INSERT INTO Items (
+INSERT INTO items (
         itemName,
         itemPrice,
         itemTitle,
@@ -28,7 +28,7 @@ VALUES (
         'Tech virtual drone online browser platform through in a system.But stream software offline.Professor install angel sector anywhere create at components smart.Document fab developers encryption smartphone powered, bespoke blockstack edit atoms.Companies a storage adopters.Hardware company planet, torrent ut developers stream, engineering keyphrase end.'
     )
 
-    INSERT INTO Items (
+    INSERT INTO items (
         itemName,
         itemPrice,
         itemTitle
@@ -37,4 +37,4 @@ VALUES (
         'Tech virtual drone online browser',
         5432.12,
         'Tech virtual drone online browser platform through in a system'
-       )
+    )
