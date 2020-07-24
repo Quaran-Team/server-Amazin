@@ -7,7 +7,7 @@ CREATE TABLE public.items (
     itemName character varying COLLATE pg_catalog."default" NOT NULL,
     itemPrice numeric(10, 2) NOT NULL DEFAULT 1.0,
     itemTitle text COLLATE pg_catalog."default" NOT NULL DEFAULT 'long(er) product title/name'::text,
-    itemAbout text COLLATE pg_catalog."default" NOT NULL DEFAULT 'this is a great product, it looks great'::text,
+    itemAbout text [] COLLATE pg_catalog."default" NOT NULL DEFAULT '{"this is a great product","it looks great"}'::text [],
     itemDescription text COLLATE pg_catalog."default" NOT NULL DEFAULT 'This is a product, etc., etc.'::text
 ) TABLESPACE pg_default;
 ALTER TABLE public.items OWNER to "amazinAdmin";
