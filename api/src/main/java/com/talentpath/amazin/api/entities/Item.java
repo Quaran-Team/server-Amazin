@@ -24,7 +24,6 @@ import org.hibernate.annotations.TypeDef;
 @AllArgsConstructor // lombok annotation to create constructor with all args
 @NoArgsConstructor // lombok annotation to create no-args constructor
 @DynamicInsert
-@TypeDef(name = "list-array", typeClass = ListArrayType.class)
 @Table(name = "items")
 public class Item {
     @Id
@@ -35,20 +34,15 @@ public class Item {
     private String itemName;
 
     @NotNull
-    @ColumnDefault("1.00")
     @Column(precision = 10, scale = 2)
     private BigDecimal itemPrice;
 
     @NotBlank
-    @ColumnDefault("long(er) product title/name")
     private String itemTitle;
 
     @NotBlank
-    @Type(type = "list-array")
-    @Column(name = "item_about", columnDefinition = "text[]")
     private String[] itemAbout;
 
     @NotBlank
-    @ColumnDefault("This is a product, etc., etc.")
     private String itemDescription;
 }
