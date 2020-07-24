@@ -1,5 +1,5 @@
 -- Table: public.items
--- DROP TABLE public.items;
+DROP TABLE public.items;
 CREATE TABLE public.items (
     itemId bigint GENERATED ALWAYS AS IDENTITY (
         INCREMENT 1 START 1 MINVALUE 1 MAXVALUE 9223372036854775807 CACHE 1
@@ -10,7 +10,7 @@ CREATE TABLE public.items (
     itemAbout text NOT NULL DEFAULT 'This is a great product. It looks great'::text,
     itemDescription text NOT NULL DEFAULT 'This is a product, etc., etc.'::text
 ) TABLESPACE pg_default;
-ALTER TABLE public.items OWNER to "postgres";
+ALTER TABLE public.items OWNER to postgres;
 COMMENT ON TABLE public.items IS 'Items table. This should hold most of the item data needed for the site.';
 COMMENT ON COLUMN public.items.itemId IS 'items ids';
 COMMENT ON COLUMN public.items.itemName IS 'This is the item name. should not be too long.';
