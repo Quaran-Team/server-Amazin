@@ -1,5 +1,5 @@
 -- Table: public.items
-DROP TABLE public.items;
+-- DROP TABLE public.items;
 CREATE TABLE public.items (
     itemId bigint GENERATED ALWAYS AS IDENTITY (
         INCREMENT 1 START 1 MINVALUE 1 MAXVALUE 9223372036854775807 CACHE 1
