@@ -1,7 +1,5 @@
 package com.talentpath.amazin.api.customerWhoBoughtAlso;
 
-import java.util.ArrayList;
-
 public class CustomerWhoBoughtAlso {
     private Long id;
     private String otherIds;
