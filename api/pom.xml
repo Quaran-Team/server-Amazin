@@ -19,9 +19,9 @@
 		<java.version>1.8</java.version>
 		<flyway.user>postgres</flyway.user>
 		<flyway.password>123456</flyway.password>
+		<flyway.url>jdbc:postgresql://localhost:5432/amazinDb</flyway.url>
 
-		<!-- List are defined as comma-separated values -->
-		<flyway.schemas>schema1,schema2,schema3</flyway.schemas>
+		<flyway.schemas>public</flyway.schemas>
 	</properties>
 
 	<dependencies>
