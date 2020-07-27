@@ -1,7 +1,5 @@
 package com.talentpath.amazin.api.entities;
 
-import java.util.List;
-
 import com.talentpath.amazin.api.repositories.ItemsRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
