@@ -4,11 +4,11 @@ public class CustomerImage {
     private Long id;
     private String imageLinks;
 
-    public CustomerImage(){
+    public CustomerImage() {
 
     }
 
-    public CustomerImage(long id, String imageLinks){
+    public CustomerImage(long id, String imageLinks) {
         super();
         this.id = id;
         this.imageLinks = imageLinks;
@@ -41,23 +41,26 @@ public class CustomerImage {
 
     @Override
     public boolean equals(Object obj) {
-        if (this == obj) return true;
-        if (obj == null) return false;
-        if (getClass() != obj.getClass()) return false;
+        if (this == obj)
+            return true;
+        if (obj == null)
+            return false;
+        if (getClass() != obj.getClass())
+            return false;
         CustomerImage other = (CustomerImage) obj;
         // id comparison
         if (id == null) {
-            if (other.id != null) return false;
-        }
-        else if (!id.equals(other.id)) return false;
+            if (other.id != null)
+                return false;
+        } else if (!id.equals(other.id))
+            return false;
         // arrayOfImageLinks comparison
         if (imageLinks == null) {
-            if (other.imageLinks != null) return false;
-        }
-        else if (!imageLinks.equals(other.imageLinks)) return false;
+            if (other.imageLinks != null)
+                return false;
+        } else if (!imageLinks.equals(other.imageLinks))
+            return false;
         return true;
     }
-
-
 
 }
