@@ -1,5 +1,4 @@
 package com.talentpath.amazin.api.qAndA;
-import java.util.ArrayList;
 
 public class QAndA {
     private Long id;
