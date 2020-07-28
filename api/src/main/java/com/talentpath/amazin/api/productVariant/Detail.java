@@ -3,7 +3,7 @@ package com.talentpath.amazin.api.productVariant;
 public class Detail {
     private Long id;
     private String otherIds;
-    private Long selectorID;
+    private String selectorID;
     private String feature;
     private String detail;
 
@@ -12,10 +12,15 @@ public class Detail {
 
     }
 
-    public Detail(long id, String otherIds) {
+    public Detail(long id, String otherIds
+//        , String selectorID, String feature, String detail
+    ) {
         super();
         this.id = id;
         this.otherIds = otherIds;
+//        this.selectorID = selectorID;
+//        this.feature = feature;
+//        this.detail = detail;
     }
 
     public Long getId() {
@@ -34,29 +39,29 @@ public class Detail {
         this.otherIds = otherIds;
     }
 
-    public Long getSelectorID() {
-        return selectorID;
-    }
-
-    public void setSelectorID(Long selectorID) {
-        this.selectorID = selectorID;
-    }
-
-    public String getFeature() {
-        return feature;
-    }
-
-    public void setFeature(String feature) {
-        this.feature = feature;
-    }
-
-    public String getDetail() {
-        return detail;
-    }
-
-    public void setDetail(String detail) {
-        this.detail = detail;
-    }
+//    public Long getSelectorID() {
+//        return selectorID;
+//    }
+//
+//    public void setSelectorID(Long selectorID) {
+//        this.selectorID = selectorID;
+//    }
+//
+//    public String getFeature() {
+//        return feature;
+//    }
+//
+//    public void setFeature(String feature) {
+//        this.feature = feature;
+//    }
+//
+//    public String getDetail() {
+//        return detail;
+//    }
+//
+//    public void setDetail(String detail) {
+//        this.detail = detail;
+//    }
 
     @Override
     public int hashCode() {
