@@ -1,4 +1,4 @@
-package com.talentpath.amazin.api.customerWhoBoughtAlso;
+package com.talentpath.amazin.api.customersWhoBoughtAlso;
 
 import java.util.ArrayList;
 import java.util.List;
