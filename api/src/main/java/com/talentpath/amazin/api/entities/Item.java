@@ -22,7 +22,7 @@ import org.hibernate.annotations.DynamicInsert;
 @Data // Lombok annotation; tells it to create getters and setters
 @AllArgsConstructor // lombok annotation to create constructor with all args
 @NoArgsConstructor // lombok annotation to create no-args constructor
-@Accessors(chain = true)
+//@Accessors(chain = true)
 @DynamicInsert
 @Table(name = "items", schema = "public")
 // @JsonIgnoreProperties({ "hibernateLazyInitializer", "handler" })
