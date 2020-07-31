@@ -20,4 +20,13 @@ public class QAndAsHardcodedService {
     public List<QAndA> findAll() {
         return qAndAs;
     }
+
+    public QAndA findById(long id) {
+        for (QAndA qAnda : qAndAs) {
+            if (qAnda.getId() == id) {
+                return qAnda;
+            }
+        }
+        return null;
+    }
 }
