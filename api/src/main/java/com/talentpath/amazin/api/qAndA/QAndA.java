@@ -1,21 +1,35 @@
 package com.talentpath.amazin.api.qAndA;
 
+import javax.persistence.Entity;
+import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name= "questions", schema = "public")
 public class QAndA {
+
+    @Id
+    @Column(name = "questionid")
     private Long id;
+    @Column(name = "question")
     private String question;
+    @Column(name = "itemid")
     private String answers;
-    private int votes;
+    // private int votes;
 
     public QAndA(){
 
     }
 
-    public QAndA(long id, String question, String answers, int votes){
+    public QAndA(long id, String question, String answers){
         super();
         this.id = id;
         this.question = question;
         this.answers = answers;
-        this.votes = votes;
+        // this.votes = votes;
     }
 
     public Long getId() {
@@ -42,13 +56,13 @@ public class QAndA {
         this.answers = answers;
     }
 
-    public int getVotes() {
-        return votes;
-    }
+    // public int getVotes() {
+    //     return votes;
+    // }
 
-    public void setVotes(int votes) {
-        this.votes = votes;
-    }
+    // public void setVotes(int votes) {
+    //     this.votes = votes;
+    // }
 
     @Override
     public int hashCode() {
