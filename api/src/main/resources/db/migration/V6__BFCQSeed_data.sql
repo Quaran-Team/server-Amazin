@@ -3,6 +3,7 @@ INSERT INTO public.questions (
         itemId
     )
 VALUES (
+<<<<<<< HEAD
         'How do you like it?',
         '2'
     );
@@ -28,5 +29,8 @@ INSERT INTO public.questions (
     )
 VALUES (
         'Does it come in different colors?',
+=======
+        'Totally Awesome product',
+>>>>>>> cef818156f941a741b629c4f4b600f709cc3ce01
         '2'
     );
