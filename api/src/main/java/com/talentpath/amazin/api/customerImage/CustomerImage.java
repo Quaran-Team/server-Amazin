@@ -1,7 +1,22 @@
 package com.talentpath.amazin.api.customerImage;
 
+import javax.persistence.Entity;
+import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+
+@Entity
+@Table(name= "jca0", schema = "public")
 public class CustomerImage {
+
+    @Id
+//    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "itemid")
     private Long id;
+    @Column(name = "itemimage")
     private String imageLinks;
 
     public CustomerImage() {

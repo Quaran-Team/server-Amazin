@@ -1,31 +1,36 @@
 package com.talentpath.amazin.api.qAndA;
 
-import java.net.URI;
 import java.util.List;
 
+import com.talentpath.amazin.api.qAndA.QAndAsRepository;
+
+import org.apache.tomcat.util.json.JSONParser;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.CrossOrigin;;
 
 
 
 @CrossOrigin(origins = { "http://localhost:3000" })
+@RequestMapping("/qAndAs")
 @RestController
 public class QAndAResource {
 
     @Autowired
-    private QAndAsHardcodedService qAndAManagementService;
+    private QAndAsRepository qAndARepository;
 
-    @GetMapping("/qAndA")
+    @GetMapping("/")
+    @Query("SELECT * FROM questions")
     public List<QAndA> getAllQAndAs() {
-        return qAndAManagementService.findAll();
+        return (List<QAndA>) qAndARepository.findAll();
     }
 
-    @GetMapping("/qAndA/{id}")
-    public QAndA getQAndA( @PathVariable long id) {
-        return qAndAManagementService.findById(id);
-    }
+    // @GetMapping("/{id}")
+    // public QAndA getQAndA( @PathVariable long id) {
+    //     return qAndARepository.findById(id);
+    // }
 }
