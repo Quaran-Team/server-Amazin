@@ -1,7 +1,22 @@
 package com.talentpath.amazin.api.customerWhoBoughtAlso;
 
+import javax.persistence.Entity;
+import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+
+@Entity
+@Table(name= "jca1", schema = "public")
 public class CustomerWhoBoughtAlso {
+
+    @Id
+
+    @Column(name = "itemid")
     private Long id;
+    @Column(name = "otheritems")
     private String otherIds;
 
     public CustomerWhoBoughtAlso() {
