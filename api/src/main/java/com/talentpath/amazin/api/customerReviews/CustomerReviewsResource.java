@@ -1,26 +1,32 @@
 package com.talentpath.amazin.api.customerReviews;
 
 import java.util.List;
+import com.talentpath.amazin.api.customerReviews.CustomerReviewsRepo;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
+@CrossOrigin(origins = { "http://localhost:3000" })
+@RequestMapping("/customerReviews")
 @RestController
 public class CustomerReviewsResource {
 
     @Autowired
-    private CustomerReviewsHardcodedService customerReviewsManagementService;
+    private CustomerReviewsRepo customerReviewsRepo;
 
-    @GetMapping("/customerReviews")
+    @GetMapping("/")
+    @Query("SELECT * FROM customerreviews")
     public List<CustomerReviews> getAllCustomerReviews() {
-        return customerReviewsManagementService.findAll();
+        return (List<CustomerReviews>) customerReviewsRepo.findAll();
     }
 
-    @GetMapping("/customerReviews/{id}")
-    public CustomerReviews getCustomerReviews(@PathVariable long id) {
-        return customerReviewsManagementService.findById(id);
-    }
-
+//    @GetMapping("/{id}")
+//    @Query("SELECT * FROM customerreviews")
+//    public List<CustomerReviews> getCustomerReviewsById(@PathVariable("id") long id) {
+//        return (List<CustomerReviews>) customerReviewsRepo.getOne(id);
+//    }
 }
-
