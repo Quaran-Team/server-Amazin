@@ -14,7 +14,7 @@ public class CustomerReviews {
     private Long id;
     @Column(name = "reviewer")
     private String reviewer;
-    @Column(name = "reviewTitle")
+    @Column(name = "reviewtitle")
     private String reviewTitle;
 
     public CustomerReviews(){
