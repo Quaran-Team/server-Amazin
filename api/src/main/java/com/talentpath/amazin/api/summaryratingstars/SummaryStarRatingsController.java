@@ -1,8 +1,6 @@
 package com.talentpath.amazin.api.summaryratingstars;
 
 
-import com.talentpath.amazin.api.entities.Item;
-import com.talentpath.amazin.api.repositories.ItemsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -21,7 +19,7 @@ public class SummaryStarRatingsController {
     private StarRepo starRepo;
 
     @GetMapping
-    @Query("SELECT * FROM items")
+    @Query("SELECT * FROM bwl01")
     public List<SummaryStarRatings> getAllItems() {
         return starRepo.findAll();
     }
