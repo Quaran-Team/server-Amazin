@@ -18,16 +18,16 @@ import java.util.List;
 public class SummaryStarRatingsController {
 
     @Autowired
-    private ItemsRepository itemsRepository;
+    private StarRepo starRepo;
 
     @GetMapping
     @Query("SELECT * FROM items")
-    public List<Item> getAllItems() {
-        return itemsRepository.findAll();
+    public List<SummaryStarRatings> getAllItems() {
+        return starRepo.findAll();
     }
 
     @GetMapping("/{id}")
-    public Item getItemById(@PathVariable("id") long id) {
-        return itemsRepository.getOne(id);
+    public SummaryStarRatings getItemById(@PathVariable("id") long id) {
+        return starRepo.getOne(id);
     }
 }
