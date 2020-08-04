@@ -1,31 +1,48 @@
 package com.talentpath.amazin.api.comparisonGrid;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name= "items", schema = "public")
 public class ComparisonItem {
 
-    private long id;
+    @Id
+
+    @Column(name = "itemid")
+    private Long id;
+    @Column(name = "itemname")
     private String name;
-    private Double price;
-    private int rating;
-    private int modes;
+    @Column(name = "itemprice")
+    private Long price;
+    @Column(name = "itemtitle")
+    private String title;
+    @Column(name = "itemabout")
+    private String about;
+    @Column(name = "itemdescription")
+    private String description;
 
     public ComparisonItem() {
 
     }
 
-    public ComparisonItem(long id, String name, Double price, int rating, int modes){
+    public ComparisonItem(Long id, String name, Long price, String rating, String modes, String description){
         super();
         this.id = id;
         this.name = name;
         this.price = price;
-        this.rating = rating;
-        this.modes = modes;
+        this.title = rating;
+        this.about = modes;
+        this.description = description;
     }
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -37,27 +54,35 @@ public class ComparisonItem {
         this.name = name;
     }
 
-    public Double getPrice() {
+    public Long getPrice() {
         return price;
     }
 
-    public void setPrice(Double price) {
+    public void setPrice(Long price) {
         this.price = price;
     }
 
-    public int getRating() {
-        return rating;
+    public String getRating() {
+        return title;
     }
 
-    public void setRating(int rating) {
-        this.rating = rating;
+    public void setRating(String title) {
+        this.title = title;
     }
 
-    public int getModes() {
-        return modes;
+    public String getModes() {
+        return about;
     }
 
-    public void setModes(int modes) {
-        this.modes = modes;
+    public void setModes(String about) {
+        this.about = about;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 }

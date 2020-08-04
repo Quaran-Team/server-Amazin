@@ -3,7 +3,6 @@ package com.talentpath.amazin.api.comparisonGrid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -13,15 +12,15 @@ import java.util.List;
 public class ComparisonGridResource {
 
     @Autowired
-    private ComparisonGridService ComparisonGridManagementService;
+    private ComparisonGridRepo ComparisonGridManagementRepo;
 
     @GetMapping("/all/products")
     public List<ComparisonItem> getAll() {
-        return ComparisonGridManagementService.findAll();
+        return ComparisonGridManagementRepo.findAll();
     }
 
-    @GetMapping("/all/products/{id}")
+  /*  @GetMapping("/all/products/{id}")
     public ComparisonItem getAll(@PathVariable long id) {
-        return ComparisonGridManagementService.findById(id);
-    }
+        return ComparisonGridManagementRepo.findById(id);
+    }*/
 }
