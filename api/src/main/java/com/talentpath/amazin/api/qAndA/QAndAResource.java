@@ -11,19 +11,13 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.PathVariable;
-<<<<<<< HEAD
-import org.springframework.web.bind.annotation.CrossOrigin;;
-=======
 import org.springframework.web.bind.annotation.CrossOrigin;
->>>>>>> cef818156f941a741b629c4f4b600f709cc3ce01
 
 
 
 @CrossOrigin(origins = { "http://localhost:3000" })
-<<<<<<< HEAD
+
 @RequestMapping("/qAndAs")
-=======
->>>>>>> cef818156f941a741b629c4f4b600f709cc3ce01
 @RestController
 public class QAndAResource {
 
@@ -36,15 +30,9 @@ public class QAndAResource {
         return (List<QAndA>) qAndARepository.findAll();
     }
 
-<<<<<<< HEAD
+
     // @GetMapping("/{id}")
     // public QAndA getQAndA( @PathVariable long id) {
     //     return qAndARepository.findById(id);
     // }
-=======
-    @GetMapping("/qAndA/{id}")
-    public QAndA getQAndA( @PathVariable long id) {
-        return qAndAManagementService.findById(id);
-    }
->>>>>>> cef818156f941a741b629c4f4b600f709cc3ce01
 }
