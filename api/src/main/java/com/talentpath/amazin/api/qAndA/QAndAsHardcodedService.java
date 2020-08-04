@@ -12,9 +12,9 @@ public class QAndAsHardcodedService {
     private static long idCounter = 0;
 
     static {
-        qAndAs.add(new QAndA(++idCounter, "question0", "answers0", 100));
-        qAndAs.add(new QAndA(++idCounter, "question1", "answers1", 10));
-        qAndAs.add(new QAndA(++idCounter, "question2", "answers2", 50));
+        qAndAs.add(new QAndA(++idCounter, "question0", "answers0"));
+        qAndAs.add(new QAndA(++idCounter, "question1", "answers1"));
+        qAndAs.add(new QAndA(++idCounter, "question2", "answers2"));
     }
 
     public List<QAndA> findAll() {
