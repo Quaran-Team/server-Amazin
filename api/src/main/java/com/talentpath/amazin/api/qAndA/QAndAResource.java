@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 
 
 @CrossOrigin(origins = { "http://localhost:3000" })
+
 @RequestMapping("/qAndAs")
 @RestController
 public class QAndAResource {
@@ -28,6 +29,7 @@ public class QAndAResource {
     public List<QAndA> getAllQAndAs() {
         return (List<QAndA>) qAndARepository.findAll();
     }
+
 
     // @GetMapping("/{id}")
     // public QAndA getQAndA( @PathVariable long id) {
