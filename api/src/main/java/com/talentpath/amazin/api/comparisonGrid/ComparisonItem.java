@@ -1,63 +1,53 @@
 package com.talentpath.amazin.api.comparisonGrid;
 
+import lombok.*;
+import lombok.experimental.Accessors;
+
+import java.math.BigDecimal;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+import org.hibernate.annotations.DynamicInsert;
+
+@Entity
+@Data // Lombok annotation; tells it to create getters and setters
+@AllArgsConstructor // lombok annotation to create constructor with all args
+@NoArgsConstructor // lombok annotation to create no-args constructor
+//@Accessors(chain = true)
+@DynamicInsert
+@Table(name= "items", schema = "public")
 public class ComparisonItem {
+    @Id
+//    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column (name="itemid")
+    private long itemId;
 
-    private long id;
-    private String name;
-    private Double price;
-    private int rating;
-    private int modes;
+    //    @NotBlank
+    @Column (name="itemname")
+    private String itemName;
 
-    public ComparisonItem() {
+    //    @NotNull
+    @Column(name="itemprice", precision = 10, scale = 2)
+    private BigDecimal itemPrice;
 
-    }
+    //    @NotBlank
+    @Column (name="itemtitle")
+    private String itemTitle;
 
-    public ComparisonItem(long id, String name, Double price, int rating, int modes){
-        super();
-        this.id = id;
-        this.name = name;
-        this.price = price;
-        this.rating = rating;
-        this.modes = modes;
-    }
+    //    @NotBlank
+    @Column (name="itemabout")
+    private String itemAbout;
 
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public Double getPrice() {
-        return price;
-    }
-
-    public void setPrice(Double price) {
-        this.price = price;
-    }
-
-    public int getRating() {
-        return rating;
-    }
-
-    public void setRating(int rating) {
-        this.rating = rating;
-    }
-
-    public int getModes() {
-        return modes;
-    }
-
-    public void setModes(int modes) {
-        this.modes = modes;
-    }
+    //    @NotBlank
+    @Column (name="itemdescription")
+    private String itemDescription;
 }
