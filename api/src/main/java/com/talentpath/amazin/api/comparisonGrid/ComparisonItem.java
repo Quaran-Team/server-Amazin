@@ -1,88 +1,53 @@
 package com.talentpath.amazin.api.comparisonGrid;
 
+import lombok.*;
+import lombok.experimental.Accessors;
+
+import java.math.BigDecimal;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+import org.hibernate.annotations.DynamicInsert;
 
 @Entity
+@Data // Lombok annotation; tells it to create getters and setters
+@AllArgsConstructor // lombok annotation to create constructor with all args
+@NoArgsConstructor // lombok annotation to create no-args constructor
+//@Accessors(chain = true)
+@DynamicInsert
 @Table(name= "items", schema = "public")
 public class ComparisonItem {
-
     @Id
+//    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column (name="itemid")
+    private long itemId;
 
-    @Column(name = "itemid")
-    private Long id;
-    @Column(name = "itemname")
-    private String name;
-    @Column(name = "itemprice")
-    private Long price;
-    @Column(name = "itemtitle")
-    private String title;
-    @Column(name = "itemabout")
-    private String about;
-    @Column(name = "itemdescription")
-    private String description;
+    //    @NotBlank
+    @Column (name="itemname")
+    private String itemName;
 
-    public ComparisonItem() {
+    //    @NotNull
+    @Column(name="itemprice", precision = 10, scale = 2)
+    private BigDecimal itemPrice;
 
-    }
+    //    @NotBlank
+    @Column (name="itemtitle")
+    private String itemTitle;
 
-    public ComparisonItem(Long id, String name, Long price, String rating, String modes, String description){
-        super();
-        this.id = id;
-        this.name = name;
-        this.price = price;
-        this.title = rating;
-        this.about = modes;
-        this.description = description;
-    }
+    //    @NotBlank
+    @Column (name="itemabout")
+    private String itemAbout;
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public Long getPrice() {
-        return price;
-    }
-
-    public void setPrice(Long price) {
-        this.price = price;
-    }
-
-    public String getRating() {
-        return title;
-    }
-
-    public void setRating(String title) {
-        this.title = title;
-    }
-
-    public String getModes() {
-        return about;
-    }
-
-    public void setModes(String about) {
-        this.about = about;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
+    //    @NotBlank
+    @Column (name="itemdescription")
+    private String itemDescription;
 }
