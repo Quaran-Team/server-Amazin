@@ -1,45 +1,54 @@
 package com.talentpath.amazin.api.customerReviews;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "customerreviews", schema = "public")
 public class CustomerReviews {
+
+    @Id
+    @Column(name="itemid")
     private Long id;
-    private String username;
-    private String description;
+    @Column(name = "reviewer")
+    private String reviewer;
+    @Column(name = "reviewtitle")
+    private String reviewTitle;
 
     public CustomerReviews(){
-
     }
 
-    public CustomerReviews(long id, String username, String description){
+    public CustomerReviews(long id, String reviewer, String reviewTitle){
         super();
         this.id = id;
-        this.username = username;
-        this.description = description;
+        this.reviewer = reviewer;
+        this.reviewTitle = reviewTitle;
     }
 
     public Long getId() {
-
         return id;
     }
 
     public void setId(Long id) {
-
         this.id = id;
     }
 
-    public String getUsername() {
-        return username;
+    public String getReviewer() {
+        return reviewer;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setReviewer(String reviewer) {
+        this.reviewer = reviewer;
     }
 
-    public String getDescription() {
-        return description;
+    public String getReviewTitle() {
+        return reviewTitle;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setReviewTitle(String reviewTitle) {
+        this.reviewTitle = reviewTitle;
     }
 
 
@@ -47,9 +56,9 @@ public class CustomerReviews {
     public int hashCode() {
         final int prime = 31;
         int result = 1;
-        result = prime * result + ((description == null) ? 0 : description.hashCode());
+        result = prime * result + ((reviewTitle == null) ? 0 : reviewTitle.hashCode());
         result = prime * result + ((id == null) ? 0 : id.hashCode());
-        result = prime * result + ((username == null) ? 0 : username.hashCode());
+        result = prime * result + ((reviewer == null) ? 0 : reviewer.hashCode());
         return result;
     }
 
@@ -65,10 +74,10 @@ public class CustomerReviews {
         }
         else if (!id.equals(other.id)) return false;
         // arrayOfOtherIds comparison
-        if (username == null) {
-            if (other.username != null) return false;
+        if (reviewer == null) {
+            if (other.reviewer != null) return false;
         }
-        else if (!description.equals(other.description)) return false;
+        else if (!reviewTitle.equals(other.reviewTitle)) return false;
         return true;
     }
 }

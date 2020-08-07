@@ -28,22 +28,27 @@ import org.hibernate.annotations.DynamicInsert;
 // @JsonIgnoreProperties({ "hibernateLazyInitializer", "handler" })
 public class Item {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+//    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column (name="itemid")
     private long itemId;
 
-    @NotBlank
+//    @NotBlank
+    @Column (name="itemname")
     private String itemName;
 
-    @NotNull
-    @Column(precision = 10, scale = 2)
+//    @NotNull
+    @Column(name="itemprice", precision = 10, scale = 2)
     private BigDecimal itemPrice;
 
-    @NotBlank
+//    @NotBlank
+    @Column (name="itemtitle")
     private String itemTitle;
 
-    @NotBlank
+//    @NotBlank
+    @Column (name="itemabout")
     private String itemAbout;
 
-    @NotBlank
+//    @NotBlank
+    @Column (name="itemdescription")
     private String itemDescription;
 }
