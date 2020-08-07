@@ -33,6 +33,19 @@ public class BWLStarRouteTest {
         int statusCode = response.getStatusCode();
 
         Assert.assertEquals(statusCode, 200);
+//        Response response = RestAssured.get("https://reqres.in/api/");
+//
+//        System.out.println(response.asString());
+//        System.out.println(response.getBody().asString());
+//        System.out.println(response.getStatusCode());
+//        System.out.println(response.getStatusLine());
+//        System.out.println(response.getHeader("content-type"));
+//        System.out.println(response.getTime());
+//
+//        int statusCode = response.getStatusCode();
+//
+//        Assert.assertEquals(statusCode, 200);
+
     }
 
     @Test
