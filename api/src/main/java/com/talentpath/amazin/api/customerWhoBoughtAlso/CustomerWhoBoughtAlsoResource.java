@@ -3,6 +3,7 @@ package com.talentpath.amazin.api.customerWhoBoughtAlso;
 import java.util.List;
 
 import com.talentpath.amazin.api.customerWhoBoughtAlso.CustomerWhoBoughtAlsoRepo;
+import java.util.Optional;
 
 import org.apache.tomcat.util.json.JSONParser;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,8 +28,10 @@ public class CustomerWhoBoughtAlsoResource {
         return (List<CustomerWhoBoughtAlso>) customerWhoBoughtAlsoRepo.findAll();
     }
 
-//    @GetMapping("/{id}")
-//    public CustomerWhoBoughtAlso getCustomerWhoBoughtAlso( @PathVariable long id) {
-//        return customerWhoBoughtAlsoManagementService.findById(id);
-//    }
+    @GetMapping("/{itemid}")
+    @Query("SELECT * FROM jca1 WHERE itemid = :itemid")
+    public Optional<CustomerWhoBoughtAlso> getCustomerWhoBoughtAlsoById(@PathVariable("itemid") long itemid){
+        return customerWhoBoughtAlsoRepo.findById(itemid);
+    }
+
 }

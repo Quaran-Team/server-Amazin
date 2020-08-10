@@ -3,6 +3,7 @@ package com.talentpath.amazin.api.customerImage;
 import java.util.List;
 
 import com.talentpath.amazin.api.customerImage.CustomerImageRepo;
+import java.util.Optional;
 
 import org.apache.tomcat.util.json.JSONParser;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,9 +28,10 @@ public class CustomerImageResource {
         return (List<CustomerImage>) customerImageRepo.findAll();
     }
 
-//    @GetMapping("/{id}")
-//    @Query("SELECT * FROM jca0")
-//    public List<CustomerImage> getCustomerImagesById(@PathVariable("id") long id) {
-//        return (List<CustomerImage>) customerImageRepo.getOne(id);
-//    }
+    @GetMapping("/{itemid}")
+    @Query("SELECT * FROM jca0 WHERE itemid = :itemid")
+    public Optional<CustomerImage> getCustomerImageById(@PathVariable("itemid") long itemid){
+        return customerImageRepo.findById(itemid);
+    }
+
 }
