@@ -1,6 +1,5 @@
 package com.talentpath.amazin.api.summaryratingstars;
 
-
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -9,14 +8,12 @@ import org.hibernate.annotations.DynamicInsert;
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 
-
-@Entity
-@Data // Lombok annotation; tells it to create getters and setters
-@AllArgsConstructor // lombok annotation to create constructor with all args
-@NoArgsConstructor // lombok annotation to create no-args constructor
-//@Accessors(chain = true)
-@DynamicInsert
-@Table(name = "bwl01", schema = "public")
+@Entity // JPA - annotation used to indicate that the class is a JPA entity class!
+@Data // Lombok annotation tells it to create all getters and setters
+@AllArgsConstructor // Lombok annotation to create constructor with all args
+@NoArgsConstructor // Lombok annotation to create no-args constructor
+@DynamicInsert // JPA - when the insert object is generated, generate a dynamic insert statement
+@Table(name = "bwl01", schema = "public") // provided by JPA to specify more details about the table associated to the class.
 
 public class SummaryStarRatings {
 
