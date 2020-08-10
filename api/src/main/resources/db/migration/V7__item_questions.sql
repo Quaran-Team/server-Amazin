@@ -5,7 +5,7 @@ CREATE TABLE public.questions (
         INCREMENT 1 START 1 MINVALUE 1 MAXVALUE 9223372036854775807 CACHE 1
     ) PRIMARY KEY,
     question text NOT NULL,
-    itemId text NOT NULL
+    itemId numeric(10, 2) NOT NULL
 ) TABLESPACE pg_default;
 ALTER TABLE public.questions OWNER to postgres;
 COMMENT ON TABLE public.questions IS 'Questions table. This should hold most of the question data needed for each item.';
