@@ -1,4 +1,4 @@
-package com.talentpath.amazin.api.qAndA;
+package com.talentpath.amazin.api.answers;
 
 import javax.persistence.Entity;
 import javax.persistence.Column;
@@ -8,27 +8,27 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name= "questions", schema = "public")
-public class QAndA {
+@Table(name= "answers", schema = "public")
+public class Answers {
 
     @Id
-    @Column(name = "questionid")
+    @Column(name = "answerid")
     private Long id;
-    @Column(name = "question")
-    private String question;
-    @Column(name = "itemid")
-    private Long itemid;
+    @Column(name = "answer")
+    private String answer;
+    @Column(name = "questionid")
+    private Long questionid;
     // private int votes;
 
-    public QAndA(){
+    public Answers(){
 
     }
 
-    public QAndA(long id, String question, Long itemid){
+    public Answers(long id, String answer, Long questionid){
         super();
         this.id = id;
-        this.question = question;
-        this.itemid = itemid;
+        this.answer = answer;
+        this.questionid = questionid;
         // this.votes = votes;
     }
 
@@ -40,20 +40,20 @@ public class QAndA {
         this.id = id;
     }
 
-    public String getQuestion() {
-        return question;
+    public String getanswer() {
+        return answer;
     }
 
-    public void setQuestion( String question) {
-        this.question = question;
+    public void setanswer( String answer) {
+        this.answer = answer;
     }
 
-    public Long getitemid() {
-        return itemid;
+    public Long getquestionid() {
+        return questionid;
     }
 
-    public void setitemid(Long itemid) {
-        this.itemid = itemid;
+    public void setquestionid(Long questionid) {
+        this.questionid = questionid;
     }
 
     // public int getVotes() {
@@ -77,17 +77,17 @@ public class QAndA {
         if (this == obj) return true;
         if (obj == null) return false;
         if (getClass() != obj.getClass()) return false;
-        QAndA other = (QAndA) obj;
+        Answers other = (Answers) obj;
         // id comparison
         if (id == null) {
             if (other.id != null) return false;
         }
         else if (!id.equals(other.id)) return false;
         // arrayOfOtherIds comparison
-        if (question == null) {
-            if (other.question != null) return false;
+        if (answer == null) {
+            if (other.answer != null) return false;
         }
-        else if (!question.equals(other.question)) return false;
+        else if (!answer.equals(other.answer)) return false;
         return true;
     }
 
