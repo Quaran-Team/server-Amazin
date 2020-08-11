@@ -5,7 +5,7 @@ CREATE TABLE public.answers (
         INCREMENT 1 START 1 MINVALUE 1 MAXVALUE 9223372036854775807 CACHE 1
     ) PRIMARY KEY,
     answer text NOT NULL,
-    questionId text NOT NULL
+    questionId numeric(10, 2) NOT NULL
 ) TABLESPACE pg_default;
 ALTER TABLE public.answers OWNER to postgres;
 COMMENT ON TABLE public.answers IS 'Answers table. This should hold the answer data needed for each question.';
