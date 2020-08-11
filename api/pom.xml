@@ -20,7 +20,7 @@
     <properties>
         <java.version>1.8</java.version>
         <flyway.user>postgres</flyway.user>
-        <flyway.password>123456</flyway.password>
+        <flyway.password>root</flyway.password>
         <flyway.url>jdbc:postgresql://localhost:5432/amazinDb</flyway.url>
         <flyway.version>6.5.2</flyway.version>
         <kotlin.version>1.4.0-rc</kotlin.version>
