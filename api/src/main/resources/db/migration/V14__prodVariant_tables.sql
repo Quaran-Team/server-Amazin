@@ -95,6 +95,25 @@ COMMENT ON COLUMN public.detailv.selectorid IS 'selection id';
 COMMENT ON COLUMN public.detailv.feature IS 'feature for the product';
 COMMENT ON COLUMN public.detailv.detail IS 'detail of the feature based on product';
 
+-- Table: public.detailv
+-- DROP TABLE public.detailv;
+CREATE TABLE public.featurev (
+    featureid bigint GENERATED ALWAYS AS IDENTITY (
+        INCREMENT 1 START 1 MINVALUE 1 MAXVALUE 9223372036854775807 CACHE 1
+    ) PRIMARY KEY,
+    productvid bigint NOT NULL,
+	title text,
+	rating decimal
+
+) TABLESPACE pg_default;
+ALTER TABLE public.featurev OWNER to postgres;
+COMMENT ON TABLE public.featurev IS 'Detail table specifically for Product Variant component.';
+COMMENT ON COLUMN public.featurev.featureid IS 'feature id';
+COMMENT ON COLUMN public.featurev.productvid IS 'product id';
+COMMENT ON COLUMN public.featurev.title IS 'the title of the feature';
+COMMENT ON COLUMN public.featurev.rating IS 'the total star rating of the feature';
+
+
 INSERT INTO public.productv (
             seller,
             rating,
@@ -480,4 +499,36 @@ VALUES (
     5,
     'extra features',
     'does not come with tribble'
+);
+
+INSERT INTO public.featurev (
+    productvid,
+	title,
+	rating
+)
+VALUES (
+    1,
+    'Neat',
+    4.5
+);
+
+INSERT INTO public.featurev (
+    productvid,
+	title,
+	rating
+)
+VALUES (
+    1,
+    'Totally Awesome',
+    3.2
+);
+INSERT INTO public.featurev (
+    productvid,
+	title,
+	rating
+)
+VALUES (
+    1,
+    'Best Ever',
+    5.0
 );
