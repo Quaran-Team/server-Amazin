@@ -16,15 +16,21 @@ public class CustomerReviews {
     private String reviewer;
     @Column(name = "reviewtitle")
     private String reviewTitle;
+    @Column(name = "reviewtag")
+    private String reviewTag;
+    @Column(name = "reviewbody")
+    private String reviewBody;
 
     public CustomerReviews(){
     }
 
-    public CustomerReviews(long id, String reviewer, String reviewTitle){
+    public CustomerReviews(long id, String reviewer, String reviewTitle, String reviewTag, String reviewBody){
         super();
         this.id = id;
         this.reviewer = reviewer;
         this.reviewTitle = reviewTitle;
+        this.reviewTag = reviewTag;
+        this.reviewBody = reviewBody;
     }
 
     public Long getId() {
@@ -51,6 +57,21 @@ public class CustomerReviews {
         this.reviewTitle = reviewTitle;
     }
 
+    public String getReviewTag() {
+        return reviewTag;
+    }
+
+    public void setReviewTag(String reviewTag) {
+        this.reviewTag = reviewTag;
+    }
+
+    public String getReviewBody() {
+        return reviewBody;
+    }
+
+    public void setReviewBody(String reviewBody) {
+        this.reviewBody = reviewBody;
+    }
 
     @Override
     public int hashCode() {
@@ -59,6 +80,8 @@ public class CustomerReviews {
         result = prime * result + ((reviewTitle == null) ? 0 : reviewTitle.hashCode());
         result = prime * result + ((id == null) ? 0 : id.hashCode());
         result = prime * result + ((reviewer == null) ? 0 : reviewer.hashCode());
+        result = prime * result + ((reviewTag == null) ? 0 : reviewTag.hashCode());
+        result = prime * result + ((reviewBody == null) ? 0 : reviewBody.hashCode());
         return result;
     }
 
