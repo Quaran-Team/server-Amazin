@@ -22,16 +22,31 @@ COMMENT ON TABLE public.bwl01
 IS 'temporary';
 
 INSERT INTO public.bwl01 (overallRating, totalFiveStarRating, totalFourStarRating, totalThreeStarRating, totalTwoStarRating,totalOneStarRating)
-VALUES (4.8,40,30,20,10,5);
+VALUES (2.7,200,400,23,1155,1);
 
 INSERT INTO public.bwl01 (overallRating, totalFiveStarRating, totalFourStarRating, totalThreeStarRating, totalTwoStarRating,totalOneStarRating)
-VALUES (4.4,41,33,10,10,5);
+VALUES (4.1,600,18,212,45,63);
 
 INSERT INTO public.bwl01 (overallRating, totalFiveStarRating, totalFourStarRating, totalThreeStarRating, totalTwoStarRating,totalOneStarRating)
-VALUES (3.8,20,38,17,11,3);
+VALUES (4.8,2200,230,36,17,12);
 
 INSERT INTO public.bwl01 (overallRating, totalFiveStarRating, totalFourStarRating, totalThreeStarRating, totalTwoStarRating,totalOneStarRating)
-VALUES (4.1,41,31,21,11,1);
+VALUES (4.2,800,320,45,99,83);
 
 INSERT INTO public.bwl01 (overallRating, totalFiveStarRating, totalFourStarRating, totalThreeStarRating, totalTwoStarRating,totalOneStarRating)
-VALUES (2.8,4,3,2,100,5);
+VALUES (4.4,300,233,17,12,8);
+
+INSERT INTO public.bwl01 (overallRating, totalFiveStarRating, totalFourStarRating, totalThreeStarRating, totalTwoStarRating,totalOneStarRating)
+VALUES (2.1,12,15,121,855,68);
+
+INSERT INTO public.bwl01 (overallRating, totalFiveStarRating, totalFourStarRating, totalThreeStarRating, totalTwoStarRating,totalOneStarRating)
+VALUES (3.7,520,730,17,455,18);
+
+INSERT INTO public.bwl01 (overallRating, totalFiveStarRating, totalFourStarRating, totalThreeStarRating, totalTwoStarRating,totalOneStarRating)
+VALUES (3.5,567,290,545,345,66);
+
+INSERT INTO public.bwl01 (overallRating, totalFiveStarRating, totalFourStarRating, totalThreeStarRating, totalTwoStarRating,totalOneStarRating)
+VALUES (4.5,904,23,38,111,22);
+
+INSERT INTO public.bwl01 (overallRating, totalFiveStarRating, totalFourStarRating, totalThreeStarRating, totalTwoStarRating,totalOneStarRating)
+VALUES (3.1,109,456,258,295,125);
