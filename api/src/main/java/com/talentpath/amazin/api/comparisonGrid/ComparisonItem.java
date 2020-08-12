@@ -27,27 +27,31 @@ import org.hibernate.annotations.DynamicInsert;
 @Table(name= "items", schema = "public")
 public class ComparisonItem {
     @Id
-//    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column (name="itemid")
     private long itemId;
 
-    //    @NotBlank
     @Column (name="itemname")
     private String itemName;
 
-    //    @NotNull
     @Column(name="itemprice", precision = 10, scale = 2)
-    private BigDecimal itemPrice;
+    private String itemPrice;
 
-    //    @NotBlank
-    @Column (name="itemtitle")
-    private String itemTitle;
-
-    //    @NotBlank
-    @Column (name="itemabout")
-    private String itemAbout;
-
-    //    @NotBlank
     @Column (name="itemdescription")
     private String itemDescription;
+
+    @Column (name="itemrating")
+    private String itemRating;
+
+    @Column (name="itemcolor")
+    private String itemColor;
+
+    @Column (name="itemsound")
+    private String itemSound;
+
+    @Column (name="itemcategory")
+    private String itemCategory;
+
+    @Column (name="itempower")
+    private String itemPower;
 }

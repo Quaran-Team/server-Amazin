@@ -2,9 +2,8 @@ package com.talentpath.amazin.api.comparisonGrid;
 
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+import java.util.Optional;
 
 import java.util.List;
 
@@ -22,8 +21,9 @@ public class ComparisonGridResource {
         return comparisonGridRepo.findAll();
     }
 
-  /*  @GetMapping("/all/products/{id}")
-    public ComparisonItem getAll(@PathVariable long id) {
-        return ComparisonGridManagementRepo.findById(id);
+/*  @GetMapping("/all/products/{itemid}")
+  @Query("SELECT * FROM items WHERE itemid = :itemid")
+    public Optional<ComparisonItem> getByIdProduct(@PathVariable("itemid") long itemid) {
+        return ComparisonGridRepo.findById(itemid);
     }*/
 }
