@@ -21,9 +21,8 @@ public class ComparisonGridResource {
         return comparisonGridRepo.findAll();
     }
 
-/*  @GetMapping("/all/products/{itemid}")
-  @Query("SELECT * FROM items WHERE itemid = :itemid")
-    public Optional<ComparisonItem> getByIdProduct(@PathVariable("itemid") long itemid) {
-        return ComparisonGridRepo.findById(itemid);
-    }*/
+    @GetMapping("/{id}")
+    public ComparisonItem getItemById(@PathVariable("id") long id) {
+        return comparisonGridRepo.getOne(id);
+    }
 }

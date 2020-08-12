@@ -24,6 +24,7 @@ import org.hibernate.annotations.DynamicInsert;
 @NoArgsConstructor // lombok annotation to create no-args constructor
 @DynamicInsert
 @Table(name = "items", schema = "public")
+@JsonIgnoreProperties({ "hibernateLazyInitializer", "handler" })
 public class Item {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

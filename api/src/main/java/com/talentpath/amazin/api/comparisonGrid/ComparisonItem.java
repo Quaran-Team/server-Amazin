@@ -22,9 +22,9 @@ import org.hibernate.annotations.DynamicInsert;
 @Data // Lombok annotation; tells it to create getters and setters
 @AllArgsConstructor // lombok annotation to create constructor with all args
 @NoArgsConstructor // lombok annotation to create no-args constructor
-//@Accessors(chain = true)
 @DynamicInsert
-@Table(name= "items", schema = "public")
+@Table(name = "items", schema = "public")
+@JsonIgnoreProperties({ "hibernateLazyInitializer", "handler" })
 public class ComparisonItem {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -54,4 +54,7 @@ public class ComparisonItem {
 
     @Column (name="itempower")
     private String itemPower;
+
+    @Column (name="itemcapacity")
+    private String itemCapacity;
 }
