@@ -11,12 +11,12 @@ INSERT INTO public.items (
     )
 VALUES (
         'Product',
-        'Price',
+        'Price (USD$)',
         'Rating',
         'Color',
         'Modes',
         'Sounds',
-        'Power',
+        'Power (Watts)',
         'Category',
         'Capacity'
     );
