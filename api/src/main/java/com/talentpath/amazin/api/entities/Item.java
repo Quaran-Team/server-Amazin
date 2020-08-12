@@ -53,4 +53,7 @@ public class Item {
 
     @Column (name="itempower")
     private String itemPower;
+
+    @Column (name="itemcapacity")
+    private String itemCapacity;
 }

@@ -12,7 +12,8 @@ CREATE TABLE public.items (
     itemMode text,
     itemSound text,
     itemCategory text NOT NULL,
-    itemPower text
+    itemPower text,
+    itemCapacity text
 ) TABLESPACE pg_default;
 ALTER TABLE public.items OWNER to postgres;
 COMMENT ON TABLE public.items IS 'Items table. This should hold most of the item data needed for the site.';
@@ -25,3 +26,4 @@ COMMENT ON COLUMN public.items.itemColor IS 'product color';
 COMMENT ON COLUMN public.items.itemSound IS 'whether the item makes noise or not';
 COMMENT ON COLUMN public.items.itemCategory IS 'to pull in each group';
 COMMENT ON COLUMN public.items.itemPower IS 'power level';
+COMMENT ON COLUMN public.items.itemCapacity IS 'how much can it hold';
