@@ -57,4 +57,8 @@ public class Item {
 
     @Column (name="itemcapacity")
     private String itemCapacity;
+    
+    @Column (name="itemmode")
+    private String itemMode;
+    
 }
