@@ -11,6 +11,8 @@ public class CustomerReviews {
 
     @Id
     @Column(name="itemid")
+    private Long itemid;
+    @Column(name="reviewid")
     private Long id;
     @Column(name = "reviewer")
     private String reviewer;
@@ -20,17 +22,24 @@ public class CustomerReviews {
     private String reviewTag;
     @Column(name = "reviewbody")
     private String reviewBody;
+    @Column(name = "rating")
+    private Float rating;
+    @Column(name = "date")
+    private String date;
 
     public CustomerReviews(){
     }
 
-    public CustomerReviews(long id, String reviewer, String reviewTitle, String reviewTag, String reviewBody){
+    public CustomerReviews(long id, Long itemid, String reviewer, String reviewTitle, String reviewTag, String reviewBody, Float rating, String date){
         super();
         this.id = id;
         this.reviewer = reviewer;
         this.reviewTitle = reviewTitle;
         this.reviewTag = reviewTag;
         this.reviewBody = reviewBody;
+        this.rating = rating;
+        this.date = date;
+        this.itemid = itemid;
     }
 
     public Long getId() {
@@ -73,15 +82,42 @@ public class CustomerReviews {
         this.reviewBody = reviewBody;
     }
 
+    public Float getRating() {
+        return rating;
+    }
+
+    public void setRating(Float rating) {
+        this.rating = rating;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
+
+    public Long getItemid() {
+        return itemid;
+    }
+
+    public void setItemid(Long itemid) {
+        this.itemid = itemid;
+    }
+
+
     @Override
     public int hashCode() {
         final int prime = 31;
         int result = 1;
-        result = prime * result + ((reviewTitle == null) ? 0 : reviewTitle.hashCode());
+//        result = prime * result + ((reviewTitle == null) ? 0 : reviewTitle.hashCode());
         result = prime * result + ((id == null) ? 0 : id.hashCode());
-        result = prime * result + ((reviewer == null) ? 0 : reviewer.hashCode());
-        result = prime * result + ((reviewTag == null) ? 0 : reviewTag.hashCode());
-        result = prime * result + ((reviewBody == null) ? 0 : reviewBody.hashCode());
+//        result = prime * result + ((reviewer == null) ? 0 : reviewer.hashCode());
+//        result = prime * result + ((reviewTag == null) ? 0 : reviewTag.hashCode());
+//        result = prime * result + ((reviewBody == null) ? 0 : reviewBody.hashCode());
+//        result = prime * result + ((rating == null) ? 0 : rating.hashCode());
+//        result = prime * result + ((date == null) ? 0 : date.hashCode());
         return result;
     }
 
