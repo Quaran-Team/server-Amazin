@@ -1,7 +1,5 @@
 # server-Amazin
 
-# client-Amazin
-
 This is the server (back-end) side of our Amazin' project created by Talent Path's 'Quaran-Team!' of full stack developers.
 
 <!-- Picture below of home page of our Amazin' App  -->
@@ -10,7 +8,7 @@ This is the server (back-end) side of our Amazin' project created by Talent Path
 
 ---
 
-The plan was to practice weekly agile sprints by creating an e-commerce product page(s) for 20-50 items in a very similar theme to that big one named after the giant river in South America.
+The goal was to practice weekly agile sprints by creating an e-commerce product page(s) for 20-50 items in a very similar theme to that big one named after the giant river in South America.
 
 Each team member has made contributions to both client (front - end) and server (back - end) sides of the project connecting their data to their components.
 
@@ -20,7 +18,7 @@ And live deployed at ... {}.
 
 ---
 
-We created the server in Java using Spring-Boot. Using Maven for our dependicies and Fly Way to manage our data migrations. 
+We created the server in Java using Spring-Boot. Using Maven for our dependencies and Fly Way to manage our data migrations. 
 
 Due to time constraints some parts are just static mocks, while others are fully dynamic.
 
@@ -31,11 +29,25 @@ to see it live
 
 To run it locally:
 1- clone down the repo
-2- run the program either in an ide (we used either intelli-J or vs code) by clicking the little green play button arrow for the file ApiApplication.java ... or via command line with mvn spring-boot:run
 
-If updates are made to the data sql files run the commands 'mvn flyway:clean' followed by 'mvn clean' before starting the server.
+2- run the program either in an ide (we used either intelli-J or vs code) by clicking the little green play button arrow for the file ApiApplication.java ... or ...
+
+via CLI
+
+2- make sure you cd into the folder named API then in command line
+ use 'mvn spring-boot:start'
+
+If updates have been made to the sql seed files a migration clean should be preformed.
+This involves running the commands 'mvn flyway:clean' followed by 'mvn clean' before starting the server.
 
 If you get an error command not found MVN you will need to download and install it locally which can be done here: https://maven.apache.org/download.cgi
+
+To see the raw Json (like in the pictures) while the server is running visit "http://localhost:8080/api/v1/items" or "http://localhost:8080/api/v1/totalstars/"
+
+items pic once loaded here
+
+stars pic here
+
 ---
 
 **The Quaran-Team! consists of:**
