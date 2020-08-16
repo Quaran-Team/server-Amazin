@@ -360,72 +360,45 @@ INSERT INTO public.featurev (productvid,title,rating)VALUES (
 
 --ENTRY PRODUCT 2
 
-INSERT INTO public.productv (
-            seller,
-            rating,
-            user_rating,
-            tag,
-            tag_title,
-            category,
-            category_link,
-            similar_item
-    )
-VALUES (
-        'Darth Vader',
-        1.87,
-        1234,
-        false,
-        '',
-        'microwave stuff',
-        '/microwave_stuff',
-        'https://1001freedownloads.s3.amazonaws.com/vector/thumb/82494/1337106329.png'
-        );
+INSERT INTO public.productv (seller,rating,user_rating,tag,tag_title,category,category_link,similar_item
+    ) VALUES (
+    'Darth Vader',
+    1.87,
+    1234,
+    false,
+    '',
+    'microwave stuff',
+    '/microwave_stuff',
+    'https://1001freedownloads.s3.amazonaws.com/vector/thumb/82494/1337106329.png'
+);
 
 
 
 
 --PRODUCT 2 SELECTION 1 DEFAULT (4)
 
-   INSERT INTO public.selector (
-            productvid,
-       		title,
-       		type_selector,
-       		selector_num,
-       		price,
-       		shipping,
-       		ship_price,
-       		discount,
-       		list_price,
-       		about_item,
-       		selector_text,
-       		selector_img,
-       		isdefault,
-       		instock,
-       		message,
-       		lowstock_message,
-       		shipping_message,
-       		type_title
-       )
-   VALUES (
-            2,
-            'Stainless Steel Toshiba 1.2 Cu.ft Microwave with Sensor',
-       		1,
-       		1,
-       		140.00,
-       		true,
-       		20.00,
-       		false,
-       		0.00,
-       		'360 degree content marketing pool can we align on lunch orders.*Nobodys fault it could have been managed better pre launch. Game plan. (lets not try to) boil the ocean (here/there/everywhere) first-order optimal strategies corporate synergy.*Due diligence big picture, product management breakout fastworks loop back.*',
-       		'Stainless Steel with Sensor',
-       		'',
-       		true,
-       		300,
-       		'Get $10 off instantly: Pay $37.97 upon approval for the Amazin.com Store Card.',
-       		'Currently this item is low in stock. Hurry and order today!',
-       		'Shipping free with approval of Amazin Store Card',
-       		'color + sensor'
-           );
+   INSERT INTO public.selector (productvid,title,type_selector,selector_num,price,shipping,ship_price,discount,
+    list_price,about_item,selector_text,selector_img,isdefault,instock,message,lowstock_message,shipping_message,
+    type_title)VALUES (
+    2,
+    'Stainless Steel Toshiba 1.2 Cu.ft Microwave with Sensor',
+    1,
+    1,
+    140.00,
+    true,
+    20.00,
+    false,
+    0.00,
+    '360 degree content marketing pool can we align on lunch orders.*Nobodys fault it could have been managed better pre launch. Game plan. (lets not try to) boil the ocean (here/there/everywhere) first-order optimal strategies corporate synergy.*Due diligence big picture, product management breakout fastworks loop back.*',
+    'Stainless Steel with Sensor',
+    '',
+    true,
+    300,
+    'Get $10 off instantly: Pay $37.97 upon approval for the Amazin.com Store Card.',
+    'Currently this item is low in stock. Hurry and order today!',
+    'Shipping free with approval of Amazin Store Card',
+    'color + sensor'
+);
 
 
 INSERT INTO public.detailv (selectorid,feature,detail)VALUES (
@@ -1636,7 +1609,7 @@ INSERT INTO public.selector ( productvid, title, type_selector, selector_num, pr
     'BL480D',
     'https://www.iconsdb.com/icons/preview/black/square-xxl.png',
     true,
-    6,
+    64,
     '',
     'Currently this item is low in stock. Hurry and get your ninja today!',
     '',
@@ -1694,7 +1667,7 @@ INSERT INTO public.productv ( seller, rating, user_rating, tag, tag_title, categ
     '',
     'kitchen aide',
     '/aide_stuff',
-    ''
+    'https://www.globalgilson.com/content/images/thumbs/0018217_portable-concrete-mixers.jpeg'
 );
 
 --PRODUCT 11 SELECTION 1 DEFAULT (26)
@@ -1711,15 +1684,32 @@ INSERT INTO public.selector ( productvid, title, type_selector, selector_num, pr
     0.00,
     false,
     0.00,
-    '',
+    'Organa solo hutt antilles han wookiee binks.*Darth mace greedo antilles organa antilles.* Binks hoth organa moff moff skywalker antilles lando greedo.*',
     '',
     'https://kitchenaid-h.assetsadobe.com/is/image/content/dam/global/kitchenaid/countertop-appliance/portable/images/hero-KSM150PSKG.tif',
     true,
-    6,
+    86,
     'This is a message that is unique. I can promise that. And its attached to this product',
-    'Currently this item is low in stock. Hurry and get your ninja today!',
+    'Currently this item is low in stock. Mix it up today',
     '',
     'color'
+);
+INSERT INTO public.detailv ( selectorid, feature, detail )  VALUES (
+    26,
+    'capacity',
+    '6 quarts'
+);
+
+INSERT INTO public.detailv ( selectorid, feature, detail )  VALUES (
+    26,
+    'color',
+    'Banana Yellow'
+);
+
+INSERT INTO public.detailv ( selectorid, feature, detail )  VALUES (
+    26,
+    'power',
+    '575 watts'
 );
 
 --PRODUCT 11 SELECTION (27)
@@ -1736,15 +1726,33 @@ INSERT INTO public.selector ( productvid, title, type_selector, selector_num, pr
     0.00,
     false,
     0.00,
-    '',
+    'Yoda amidala darth mon dantooine windu fisto leia.*Aayla kenobi greedo utapau lando dantooine moff windu sebulba.*Hutt dooku hutt tusken raider solo fett calrissian wookiee.*',
     '',
     'https://i.ebayimg.com/images/g/4bMAAOSwc15bP4Fc/s-l300.jpg',
     false,
-    6,
+    69,
     'This is a message that is unique. I can promise that. And its attached to this product',
-    'Currently this item is low in stock. Hurry and get your ninja today!',
+    'Currently this item is low in stock. Mix it up today!',
     '',
     'color'
+);
+
+INSERT INTO public.detailv ( selectorid, feature, detail )  VALUES (
+    27,
+    'capacity',
+    '6 quarts'
+);
+
+INSERT INTO public.detailv ( selectorid, feature, detail )  VALUES (
+    27,
+    'color',
+    'Pretty Pink'
+);
+
+INSERT INTO public.detailv ( selectorid, feature, detail )  VALUES (
+    27,
+    'power',
+    '525 watts'
 );
 
 --PRODUCT 11 SELECTION (28)
@@ -1761,15 +1769,33 @@ INSERT INTO public.selector ( productvid, title, type_selector, selector_num, pr
     0.00,
     false,
     0.00,
-    '',
+    'Secura wicket palpatine kamino hutt yoda maul.*Wicket dantooine obi-wan r2-d2.*Binks mon solo moff luke antilles lando.*',
     '',
     'https://ak1.ostkcdn.com/images/products/9036210/KitchenAid-KSM7586PSR-Sugar-Pearl-Silver-7-quart-Bowl-Lift-Stand-Mixer-6563e17a-0ed6-4180-849b-0e348d8b7fe5_1000.jpg',
     false,
-    6,
+    96,
     'This is a message that is unique. I can promise that. And its attached to this product',
-    'Currently this item is low in stock. Hurry and get your ninja today!',
+    'Currently this item is low in stock. Mix it up today!',
     '',
     'color'
+);
+
+INSERT INTO public.detailv ( selectorid, feature, detail )  VALUES (
+    28,
+    'capacity',
+    '5 quarts'
+);
+
+INSERT INTO public.detailv ( selectorid, feature, detail )  VALUES (
+    28,
+    'color',
+    'Sassy Silver'
+);
+
+INSERT INTO public.detailv ( selectorid, feature, detail )  VALUES (
+    28,
+    'power',
+    '525 watts'
 );
 
 --PRODUCT 11 SELECTION (29)
@@ -1786,15 +1812,33 @@ INSERT INTO public.selector ( productvid, title, type_selector, selector_num, pr
     0.00,
     false,
     0.00,
+    'Binks mon solo moff luke antilles lando.*Secura wicket palpatine kamino hutt yoda maul. * Binks mon solo moff luke antilles lando. *',
     '',
-    '',
-    'https://images-na.ssl-images-amazon.com/images/I/7124M%2BqdOXL._AC_SL1500_.jpg',
+    'https://images-na.ssl-images-amazon.com/images/I/7124M%2BqdOXL._AC_SX355_.jpg',
     false,
-    6,
+    67,
     'This is a message that is unique. I can promise that. And its attached to this product',
-    'Currently this item is low in stock. Hurry and get your ninja today!',
+    'Currently this item is low in stock. Mix it up today!',
     '',
     'color'
+);
+
+INSERT INTO public.detailv ( selectorid, feature, detail )  VALUES (
+    29,
+    'capacity',
+    '6 quarts'
+);
+
+INSERT INTO public.detailv ( selectorid, feature, detail )  VALUES (
+    29,
+    'color',
+    'Lime Green'
+);
+
+INSERT INTO public.detailv ( selectorid, feature, detail )  VALUES (
+    29,
+    'power',
+    '575 watts'
 );
 
 --PRODUCT 11 SELECTION (30)
@@ -1811,25 +1855,1304 @@ INSERT INTO public.selector ( productvid, title, type_selector, selector_num, pr
     0.00,
     false,
     0.00,
-    '',
+    ' Binks mon solo moff luke antilles lando.*Ventress amidala yoda yavin lobot.*Sith skywalker leia binks. Luke ahsoka c-3po boba antilles ventress ackbar thrawn jabba.*',
     '',
     'https://kitchenaid-h.assetsadobe.com/is/image/content/dam/global/kitchenaid/countertop-appliance/portable/images/hero-KSM150PSVB.tif',
     false,
-    6,
+    60,
     'This is a message that is unique. I can promise that. And its attached to this product',
-    'Currently this item is low in stock. Hurry and get your ninja today!',
+    'Currently this item is low in stock. Mix it up today!',
     '',
     'color'
 );
 
+INSERT INTO public.detailv ( selectorid, feature, detail )  VALUES (
+    30,
+    'capacity',
+    '5.5 quarts'
+);
+
+INSERT INTO public.detailv ( selectorid, feature, detail )  VALUES (
+    30,
+    'color',
+    'Robbin Blue'
+);
+
+INSERT INTO public.detailv ( selectorid, feature, detail )  VALUES (
+    30,
+    'power',
+    '550 watts'
+);
+
+
 INSERT INTO public.featurev ( productvid, title, rating ) VALUES (
-    10,
+    11,
     'rainbow colors',
     3.5
 );
 INSERT INTO public.featurev ( productvid, title, rating ) VALUES (
-    10,
+    11,
     'aides your kitchen',
     1.3
 );
 
+-- ENTRY PRODUCT 12
+
+INSERT INTO public.productv ( seller, rating, user_rating, tag, tag_title, category, category_link, similar_item ) VALUES (
+    'Leia Organa',
+    3.7,
+    234,
+    true,
+    'Amazins Choice',
+    'kitchen aide',
+    '/aide_stuff',
+    'https://www.boschmixers.com/wp-content/uploads/2019/04/bosch-stand-mixer-wire-whips_4.jpg'
+);
+
+--PRODUCT 12 SELECTION 1 DEFAULT(31)
+
+INSERT INTO public.selector ( productvid, title, type_selector, selector_num, price,shipping,
+            ship_price, discount, list_price, about_item, selector_text,selector_img, isdefault,
+            instock, message, lowstock_message, shipping_message, type_title ) VALUES (
+    12,
+    'KitchenAide Artisan Mixer with Artisan Mixer Bundle Pack',
+    3,
+    3,
+    250.00,
+    false,
+    0.00,
+    true,
+    279.99,
+    'Quarterly sales are at an all-time low peel the onion.*I really like the colour but can you change it just do what you think. I trust you, nor doing some work for us "pro bono" will really add to your portfolio*I love it, but can you invert all colors?*It needs to be the same, but totally different I like it, but can the snow look a little warmer*should feel like a warm handshake*',
+    'Bundle Pack',
+    '',
+    true,
+    16,
+    '',
+    'Currently this item is low in stock. Mix it up today!',
+    '',
+    'Included'
+);
+
+INSERT INTO public.detailv ( selectorid, feature, detail )  VALUES (
+    31,
+    'bundle',
+    'included with offer'
+);
+
+INSERT INTO public.detailv ( selectorid, feature, detail )  VALUES (
+    31,
+    'warranty',
+    'not included'
+);
+
+INSERT INTO public.detailv ( selectorid, feature, detail )  VALUES (
+    31,
+    'classical model',
+    'yes'
+);
+
+INSERT INTO public.detailv ( selectorid, feature, detail )  VALUES (
+    31,
+    'ranking of product',
+    '#1 best kitchen helper'
+);
+
+--PRODUCT 12 SELECTION 2 (32)
+
+INSERT INTO public.selector ( productvid, title, type_selector, selector_num, price,shipping,
+            ship_price, discount, list_price, about_item, selector_text,selector_img, isdefault,
+            instock, message, lowstock_message, shipping_message, type_title ) VALUES (
+    12,
+    'KitchenAide Artisan Mixer without Pack - Sold Separately',
+    3,
+    3,
+    250.00,
+    false,
+    0.00,
+    true,
+    270.00,
+    'ugh make the font bigger for can you make it look more designed . Can we try some other colours maybe can you make the font bigger?*Conversational content deploy to production we need to harvest synergy effects.*',
+    'Sold seperately',
+    '',
+    false,
+    60,
+    'This is a message that is unique. I can promise that. And its attached to this product',
+    'Currently this item is low in stock. Mix it up today!',
+    'shipping is a message. this is a shipping message',
+    'Included'
+);
+
+INSERT INTO public.detailv ( selectorid, feature, detail )  VALUES (
+    32,
+    'bundle',
+    'sold seperately'
+);
+
+INSERT INTO public.detailv ( selectorid, feature, detail )  VALUES (
+    32,
+    'warranty',
+    'not included'
+);
+
+INSERT INTO public.detailv ( selectorid, feature, detail )  VALUES (
+    32,
+    'classical model',
+    'yes'
+);
+
+INSERT INTO public.detailv ( selectorid, feature, detail )  VALUES (
+    32,
+    'ranking of product',
+    '#1 best kitchen helper'
+);
+
+--PRODUCT 12 SELECTION 3 (33)
+
+INSERT INTO public.selector ( productvid, title, type_selector, selector_num, price,shipping,
+            ship_price, discount, list_price, about_item, selector_text,selector_img, isdefault,
+            instock, message, lowstock_message, shipping_message, type_title ) VALUES (
+    12,
+    'KitchenAide Artisan Mixer - Pack and One Year Warranty Included',
+    3,
+    3,
+    250.00,
+    false,
+    0.00,
+    true,
+    289.99,
+    'so i was wondering if my cat could be placed over the logo in the flyer*like this clipart i found yet give us a complimentary logo along with the website*Five-year strategic plan I have zero cycles for this locked and loaded*Conversational content deploy to production we need to harvest synergy effects.*',
+    'Pack and Warranty',
+    '',
+    false,
+    60,
+    'This is a message that is unique. I can promise that. And its attached to this product',
+    'Currently this item is low in stock. Mix it up today!',
+    'shipping is a message. this is a shipping message',
+    'Included'
+);
+INSERT INTO public.detailv ( selectorid, feature, detail )  VALUES (
+    33,
+    'bundle',
+    'included with offer'
+);
+
+INSERT INTO public.detailv ( selectorid, feature, detail )  VALUES (
+    33,
+    'warranty',
+    'included'
+);
+
+INSERT INTO public.detailv ( selectorid, feature, detail )  VALUES (
+    33,
+    'classical model',
+    'yes'
+);
+
+INSERT INTO public.detailv ( selectorid, feature, detail )  VALUES (
+    33,
+    'ranking of product',
+    '#1 best kitchen helper'
+);
+
+INSERT INTO public.featurev ( productvid, title, rating ) VALUES (
+    12,
+    'Mobility',
+    1.2
+);
+
+INSERT INTO public.featurev ( productvid, title, rating ) VALUES (
+    12,
+    'Bundle of fun',
+    4.3
+);
+
+INSERT INTO public.featurev ( productvid, title, rating ) VALUES (
+    12,
+    'Fun',
+    3.2
+);
+
+INSERT INTO public.featurev ( productvid, title, rating ) VALUES (
+    12,
+    'Mixing capacity',
+    3.5
+);
+
+INSERT INTO public.featurev ( productvid, title, rating ) VALUES (
+    12,
+    'Mixing Style',
+    2.2
+);
+
+INSERT INTO public.featurev ( productvid, title, rating ) VALUES (
+    12,
+    'Mixing Technique',
+    2.1
+);
+
+-- ENTRY PRODUCT 13
+
+INSERT INTO public.productv ( seller, rating, user_rating, tag, tag_title, category, category_link, similar_item ) VALUES (
+    'Han Solo',
+    3.1,
+    145,
+    false,
+    '',
+    'kitchen aide',
+    '/aide_stuff',
+    'https://image.dhgate.com/0x0p/f2/albu/g7/M00/51/B9/rBVaSVtFcTiAIpzoAAR0FUyDg1I215.jpg'
+);
+
+--PRODUCT 13 SELECTION 1 DEFAULT (34)
+
+INSERT INTO public.selector ( productvid, title, type_selector, selector_num, price,shipping,
+            ship_price, discount, list_price, about_item, selector_text,selector_img, isdefault,
+            instock, message, lowstock_message, shipping_message, type_title ) VALUES (
+    13,
+    'KitchenAide Artisan Mixer with Warranty and Mixing Bundle Pack',
+    3,
+    3,
+    230.00,
+    true,
+    14.99,
+    false,
+    0.00,
+    'so i was wondering if my cat could be placed over the logo in the flyer*like this clipart i found yet give us a complimentary logo along with the website*Five-year strategic plan I have zero cycles for this locked and loaded*Conversational content deploy to production we need to harvest synergy effects.*',
+    'Pack and Warranty',
+    '',
+    true,
+    19,
+    'This is a message that is unique. I can promise that. And its attached to this product',
+    'Currently this item is low in stock. Mix it up today!',
+    'shipping is a message. this is a shipping message',
+    'Included'
+);
+
+INSERT INTO public.detailv ( selectorid, feature, detail )  VALUES (
+    34,
+    'warranty and bundle',
+    'included'
+);
+
+INSERT INTO public.detailv ( selectorid, feature, detail )  VALUES (
+    34,
+    'capacity',
+    '4.5 quarts'
+);
+
+INSERT INTO public.detailv ( selectorid, feature, detail )  VALUES (
+    34,
+    'color',
+    'black'
+);
+
+--PRODUCT 13 SELECTION 2 (35)
+
+INSERT INTO public.selector ( productvid, title, type_selector, selector_num, price,shipping,
+            ship_price, discount, list_price, about_item, selector_text,selector_img, isdefault,
+            instock, message, lowstock_message, shipping_message, type_title ) VALUES (
+    13,
+    'KitchenAide Artisan Mixer, Mixing Bundle sold separately',
+    3,
+    3,
+    210.00,
+    true,
+    14.99,
+    false,
+    0.00,
+    'so i was wondering if my cat could be placed over the logo in the flyer*like this clipart i found yet give us a complimentary logo along with the website*Five-year strategic plan I have zero cycles for this locked and loaded*Conversational content deploy to production we need to harvest synergy effects.*',
+    'Sold Seperate',
+    '',
+    false,
+    33,
+    'Grievous amidala darth utapau darth organa solo mace jango.',
+    'Currently this item is low in stock. Mix it up today!',
+    'shipping is a message. this is a shipping message',
+    'Included'
+);
+INSERT INTO public.detailv ( selectorid, feature, detail )  VALUES (
+    35,
+    'warranty and bundle',
+    'sold separately'
+);
+
+INSERT INTO public.detailv ( selectorid, feature, detail )  VALUES (
+    35,
+    'capacity',
+    '4.5 quarts'
+);
+
+INSERT INTO public.detailv ( selectorid, feature, detail )  VALUES (
+    35,
+    'color',
+    'black'
+);
+
+INSERT INTO public.featurev ( productvid, title, rating ) VALUES (
+    13,
+    'aiding kitchen',
+    3.0
+);
+
+INSERT INTO public.featurev ( productvid, title, rating ) VALUES (
+    13,
+    'power',
+    1.0
+);
+
+INSERT INTO public.featurev ( productvid, title, rating ) VALUES (
+    13,
+    'Options',
+    5.0
+);
+
+-- ENTRY PRODUCT 14
+
+INSERT INTO public.productv ( seller, rating, user_rating, tag, tag_title, category, category_link, similar_item ) VALUES (
+    'Lando Calrissian',
+    4.2,
+    145,
+    true,
+    '#1 Best Seller',
+    'kitchen aide',
+    '/aide_stuff',
+    'https://www.globalgilson.com/content/images/thumbs/0018217_portable-concrete-mixers.jpeg'
+);
+
+--PRODUCT 14 SELECTION 1 DEFAULT (36)
+
+INSERT INTO public.selector ( productvid, title, type_selector, selector_num, price,shipping,
+            ship_price, discount, list_price, about_item, selector_text,selector_img, isdefault,
+            instock, message, lowstock_message, shipping_message, type_title ) VALUES (
+    14,
+    'KitchenAide Classic Plus Mixer',
+    0,
+    0,
+    350.00,
+    true,
+    9.99,
+    true,
+    375.00,
+    'Dagobah ventress darth luke antilles aayla.* Mon wampa palpatine chewbacca hutt.*Wampa hutt moff mandalorians solo.* Wicket droid solo windu dooku* Binks mon solo moff luke antilles lando.* Bespin jango jabba lobot anakin darth skywalker hutt.* Boba jinn ponda sebulba hutt.*',
+    '',
+    '',
+    true,
+    22,
+    'Ubb hapan soontir bormea melodie.',
+    'Currently this item is low in stock. Mix it up today!',
+    'we are shipping. this is a personalized message to ship.',
+    'Included'
+);
+
+INSERT INTO public.detailv ( selectorid, feature, detail )  VALUES (
+    36,
+    'modes',
+    '10'
+);
+
+INSERT INTO public.detailv ( selectorid, feature, detail )  VALUES (
+    36,
+    'power (watts)',
+    '250'
+);
+
+INSERT INTO public.detailv ( selectorid, feature, detail )  VALUES (
+    36,
+    'hand mixer',
+    'included'
+);
+
+INSERT INTO public.detailv ( selectorid, feature, detail )  VALUES (
+    36,
+    'capacity',
+    '4.5 quarts'
+);
+
+INSERT INTO public.detailv ( selectorid, feature, detail )  VALUES (
+    36,
+    'color',
+    'black'
+);
+
+INSERT INTO public.featurev ( productvid, title, rating ) VALUES (
+    14,
+    'variation',
+    0.9
+);
+
+INSERT INTO public.featurev ( productvid, title, rating ) VALUES (
+    14,
+    'blending power',
+    5.0
+);
+
+-- ENTRY PRODUCT 15
+
+INSERT INTO public.productv ( seller, rating, user_rating, tag, tag_title, category, category_link, similar_item ) VALUES (
+    'Chewbacca',
+    1.3,
+    145,
+    false,
+    '',
+    'kitchen aide',
+    '/aide_stuff',
+    'https://i.ytimg.com/vi/N8Bnc770XZo/maxresdefault.jpg'
+);
+
+--PRODUCT 15 SELECTION 1 DEFAULT (37)
+
+INSERT INTO public.selector ( productvid, title, type_selector, selector_num, price,shipping,
+            ship_price, discount, list_price, about_item, selector_text,selector_img, isdefault,
+            instock, message, lowstock_message, shipping_message, type_title ) VALUES (
+    15,
+    'KitchenAide Artisan Design Mixer, Diamond Design',
+    2,
+    2,
+    300.00,
+    false,
+    0.00,
+    false,
+    0.00,
+    'Lucas ipsum dolor sit amet felucia weequay chewbacca qrygg tibor farlander feeorin muun qel-droma klivian.* Peck lytton ranat davin keshiri carnor aayla vulptereen. Umbaran sarn naberrie haako. Lannik tibor greeata hutt mccool jabba. Bothan lando elom olié.* Hnemthean jabba sal-solo utapau warrick twilek terentatek arkanian organa. Taun thisspias castell iridonian watto endocott illum cbaoth rahn.* Wookiee antilles luke rendar ruurian haruun.* Jango medon gado fosh iktotchi felucia thul wuher.*',
+    '',
+    'https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/diamond-deck-of-cards-custom-home-fashions.jpg',
+    true,
+    45,
+    '',
+    'Currently this item is low in stock. Mix it up today!',
+    'shipping is a message. this is a shipping message',
+    'Design Featured'
+);
+
+INSERT INTO public.detailv ( selectorid, feature, detail )  VALUES (
+    37,
+    'color',
+    'white'
+);
+
+INSERT INTO public.detailv ( selectorid, feature, detail )  VALUES (
+    37,
+    'design',
+    'diamonds'
+);
+
+--PRODUCT 15 SELECTION 2 (38)
+
+INSERT INTO public.selector ( productvid, title, type_selector, selector_num, price,shipping,
+            ship_price, discount, list_price, about_item, selector_text,selector_img, isdefault,
+            instock, message, lowstock_message, shipping_message, type_title ) VALUES (
+    15,
+    'KitchenAide Artisan Design Mixer, Heart Design',
+    2,
+    2,
+    300.00,
+    false,
+    0.00,
+    false,
+    0.00,
+    'Chirrpa sidious trioculus duro endor neti bormea.* C-3p0 raymus klaatu dengar cb-99 zorba roonan. Boba sith ahsoka moore yaka ubese. Mod lowbacca vebb malastare qu lumiya unu.* Seerdon veers polis farlax psadan antilles.*',
+    '',
+    'https://cdn4.vectorstock.com/i/1000x1000/56/73/playing-cards-heart-vector-20655673.jpg',
+    false,
+    62,
+    '',
+    'Currently this item is low in stock. Mix it up today!',
+    'shipping is a message. this is a shipping message',
+    'Design Featured'
+);
+
+INSERT INTO public.detailv ( selectorid, feature, detail )  VALUES (
+    38,
+    'color',
+    'white'
+);
+
+INSERT INTO public.detailv ( selectorid, feature, detail )  VALUES (
+    38,
+    'design',
+    'hearts'
+);
+
+--PRODUCT 15 SELECTION 3 (39)
+
+INSERT INTO public.selector ( productvid, title, type_selector, selector_num, price,shipping,
+            ship_price, discount, list_price, about_item, selector_text,selector_img, isdefault,
+            instock, message, lowstock_message, shipping_message, type_title ) VALUES (
+    15,
+    'KitchenAide Artisan Design Mixer, Spade Design',
+    2,
+    2,
+    300.00,
+    false,
+    0.00,
+    false,
+    0.00,
+    'spades design designing spades stuff this is stuff*Five-year strategic plan I have zero cycles for this locked and loaded*Conversational content deploy to production we need to harvest synergy effects.*',
+    '',
+    'https://cdn4.vectorstock.com/i/1000x1000/74/33/spades-suit-flat-icon-vector-19617433.jpg',
+    false,
+    44,
+    '',
+    'Currently this item is low in stock. Mix it up today!',
+    'shipping is a message. this is a shipping message',
+    'Design Featured'
+);
+
+INSERT INTO public.detailv ( selectorid, feature, detail )  VALUES (
+    39,
+    'color',
+    'white'
+);
+
+INSERT INTO public.detailv ( selectorid, feature, detail )  VALUES (
+    39,
+    'design',
+    'spades'
+);
+
+INSERT INTO public.featurev ( productvid, title, rating ) VALUES (
+    15,
+    'options',
+    4.0
+);
+
+INSERT INTO public.featurev ( productvid, title, rating ) VALUES (
+    15,
+    'crushing',
+    4.5
+);
+
+INSERT INTO public.featurev ( productvid, title, rating ) VALUES (
+    15,
+    'blending',
+    2.1
+);
+
+INSERT INTO public.featurev ( productvid, title, rating ) VALUES (
+    15,
+    'energy saving',
+    4.7
+);
+
+-- ENTRY PRODUCT 16
+
+INSERT INTO public.productv ( seller, rating, user_rating, tag, tag_title, category, category_link, similar_item ) VALUES (
+    'Darth Maul',
+    3.2,
+    145,
+    true,
+    '#1 Best Seller',
+    'toaster stuff',
+    '/toaster_stuff',
+    'https://2.bp.blogspot.com/-cQeEgYLn2tQ/VZOEgvumRSI/AAAAAAAAAPc/lF9aUEDBlU8/s1600/20150630012806326.jpeg'
+);
+
+--PRODUCT 16 SELECTION 1 DEFAULT (40)
+
+INSERT INTO public.selector ( productvid, title, type_selector, selector_num, price,shipping,
+            ship_price, discount, list_price, about_item, selector_text,selector_img, isdefault,
+            instock, message, lowstock_message, shipping_message, type_title ) VALUES (
+    16,
+    'Cuisinart 2-Slice Compact Toaster (CPT-122)',
+    1,
+    1,
+    15.00,
+    true,
+    4.99,
+    true,
+    20.00,
+    'Gamorr sabé cerean darth antilles.* Bimm tano dodonna veila shawda sarn vuffi piett saché.*',
+    'CPT-122 - 2 slice compact',
+    '',
+    true,
+    63,
+    'And its attached to this product',
+    'Currently this item is low in stock. Mix it up today!',
+    'shipping is a message. this is a shipping message',
+    'Product Model'
+);
+
+INSERT INTO public.detailv ( selectorid, feature, detail )  VALUES (
+    40,
+    'No. of slices',
+    '2 slice'
+);
+
+INSERT INTO public.detailv ( selectorid, feature, detail )  VALUES (
+    40,
+    'angle of slot',
+    'vertical'
+);
+
+INSERT INTO public.detailv ( selectorid, feature, detail )  VALUES (
+    40,
+    'compact',
+    'yes'
+);
+
+INSERT INTO public.detailv ( selectorid, feature, detail )  VALUES (
+    40,
+    'portability',
+    'yes'
+);
+
+INSERT INTO public.detailv ( selectorid, feature, detail )  VALUES (
+    40,
+    'dimensions',
+    '7" W x 12" D x 8-1/4" H'
+);
+
+
+--PRODUCT 16 SELECTION 2 (41)
+
+INSERT INTO public.selector ( productvid, title, type_selector, selector_num, price,shipping,
+            ship_price, discount, list_price, about_item, selector_text,selector_img, isdefault,
+            instock, message, lowstock_message, shipping_message, type_title ) VALUES (
+    16,
+    'Cuisinart 2-Slice Tilted 45deg Toaster (CPT-123)',
+    1,
+    1,
+    15.00,
+    true,
+    4.99,
+    true,
+    20.00,
+    'Gamorr sabé cerean darth antilles.* Bimm tano dodonna veila shawda sarn vuffi piett saché.*',
+    'Pack and Warranty',
+    'CPT-123 - 2 slice angled',
+    false,
+    639,
+    'And its attached to this product',
+    'Currently this item is low in stock. Mix it up today!',
+    'shipping is a message. this is a shipping message',
+    'Product Model'
+);
+
+INSERT INTO public.detailv ( selectorid, feature, detail )  VALUES (
+    41,
+    'No. of slices',
+    '2 slice'
+);
+
+INSERT INTO public.detailv ( selectorid, feature, detail )  VALUES (
+    41,
+    'angle of slot',
+    'tilted 45 degrees'
+);
+
+INSERT INTO public.detailv ( selectorid, feature, detail )  VALUES (
+    41,
+    'compact',
+    'yes'
+);
+
+INSERT INTO public.detailv ( selectorid, feature, detail )  VALUES (
+    41,
+    'portability',
+    'yes'
+);
+
+INSERT INTO public.detailv ( selectorid, feature, detail )  VALUES (
+    41,
+    'dimensions',
+    '7" W x 12" D x 8-1/4" H'
+);
+
+--PRODUCT 16 SELECTION 3 (42)
+
+INSERT INTO public.selector ( productvid, title, type_selector, selector_num, price,shipping,
+            ship_price, discount, list_price, about_item, selector_text,selector_img, isdefault,
+            instock, message, lowstock_message, shipping_message, type_title ) VALUES (
+    16,
+    'Cuisinart 3-Slice Compact Toaster (CPT-124)',
+    1,
+    1,
+    20.00,
+    true,
+    4.99,
+    false,
+    0.00,
+    'Organa balosar shimrra kwa.*Gamorr sabé cerean darth antilles.* Bimm tano dodonna veila shawda sarn vuffi piett saché.*',
+    'CPT-124 -3 slice compact',
+    '',
+    false,
+    87,
+    'This is a message that is unique and its attached to this product',
+    'Currently this item is low in stock. Mix it up today!',
+    'shipping is a message. this is a shipping message',
+    'Product Model'
+);
+
+INSERT INTO public.detailv ( selectorid, feature, detail )  VALUES (
+    42,
+    'No. of slices',
+    '3 slice'
+);
+
+INSERT INTO public.detailv ( selectorid, feature, detail )  VALUES (
+    42,
+    'angle of slot',
+    'vertical'
+);
+
+INSERT INTO public.detailv ( selectorid, feature, detail )  VALUES (
+    42,
+    'compact',
+    'yes'
+);
+
+INSERT INTO public.detailv ( selectorid, feature, detail )  VALUES (
+    42,
+    'portability',
+    'no'
+);
+
+INSERT INTO public.detailv ( selectorid, feature, detail )  VALUES (
+    42,
+    'dimensions',
+    '10" W x 12" D x 8-1/4" H'
+);
+
+--PRODUCT 16 SELECTION 4 (43)
+
+INSERT INTO public.selector ( productvid, title, type_selector, selector_num, price,shipping,
+            ship_price, discount, list_price, about_item, selector_text,selector_img, isdefault,
+            instock, message, lowstock_message, shipping_message, type_title ) VALUES (
+    16,
+    'Cuisinart 3-Slice Tilted 45deg Toaster (CPT-125)',
+    1,
+    1,
+    20.00,
+    true,
+    4.99,
+    false,
+    0.00,
+    'Organa balosar shimrra kwa.*Gamorr sabé cerean darth antilles.* Bimm tano dodonna veila shawda sarn vuffi piett saché.*',
+    'CPT-124 -3 slice angled',
+    '',
+    false,
+    63,
+    'This is a message that is unique and its attached to this product',
+    'Currently this item is low in stock. Mix it up today!',
+    'shipping is a message. this is a shipping message',
+    'Product Model'
+);
+
+INSERT INTO public.detailv ( selectorid, feature, detail )  VALUES (
+    43,
+    'No. of slices',
+    '3 slice'
+);
+
+INSERT INTO public.detailv ( selectorid, feature, detail )  VALUES (
+    43,
+    'angle of slot',
+    'tilted 45 degrees'
+);
+
+INSERT INTO public.detailv ( selectorid, feature, detail )  VALUES (
+    43,
+    'compact',
+    'yes'
+);
+
+INSERT INTO public.detailv ( selectorid, feature, detail )  VALUES (
+    43,
+    'portability',
+    'no'
+);
+
+INSERT INTO public.detailv ( selectorid, feature, detail )  VALUES (
+    43,
+    'dimensions',
+    '10" W x 12" D x 8-1/4" H'
+);
+
+INSERT INTO public.featurev ( productvid, title, rating ) VALUES (
+    16,
+    'toasting',
+    4.3
+);
+
+INSERT INTO public.featurev ( productvid, title, rating ) VALUES (
+    16,
+    'variation',
+    4.2
+);
+
+-- ENTRY PRODUCT 17
+
+INSERT INTO public.productv ( seller, rating, user_rating, tag, tag_title, category, category_link, similar_item ) VALUES (
+    'Jabba the Hut',
+    5.0,
+    145,
+    false,
+    '',
+    'toaster stuff',
+    '/toaster_stuff',
+    'http://www.gotfunnypictures.com/wp-content/uploads/2014/09/NewImagesAug-28-50.jpg'
+);
+
+--PRODUCT 17 SELECTION 1 DEFAULT (44)
+
+INSERT INTO public.selector ( productvid, title, type_selector, selector_num, price,shipping,
+            ship_price, discount, list_price, about_item, selector_text,selector_img, isdefault,
+            instock, message, lowstock_message, shipping_message, type_title ) VALUES (
+    17,
+    'Cuisinart Brushed Compact Toaster (CPT-320)',
+    0,
+    0,
+    30.00,
+    true,
+    9.99,
+    true,
+    38.78,
+    'Cerea mon shaak sy dexter. Moff jerec dexter maarek baba. Thrella ongree hallotan djo shaddaa. Grievous depa roonan zuggs beru jax.*Dantari su shaddaa farlander droid phlog kast meridian.*Dash metalorn mustafarian aurra padmé klatooinian. Darth caamasi biggs bothan. Jinha gado tchuukthai ima-gun tiin.*',
+    '',
+    '',
+    true,
+    3,
+    'This is a message that is unique. I can promise that. And its attached to this product',
+    'Currently this item is low in stock. Mix it up today!',
+    'shipping is a message. this is a shipping message',
+    ''
+);
+
+INSERT INTO public.detailv ( selectorid, feature, detail )  VALUES (
+    44,
+    'No. slots',
+    '2 slots'
+);
+
+INSERT INTO public.detailv ( selectorid, feature, detail )  VALUES (
+    44,
+    'dimensions',
+    '7" W x 12" D x 8-1/4" H'
+);
+
+INSERT INTO public.detailv ( selectorid, feature, detail )  VALUES (
+    44,
+    'color',
+    'stainless silver'
+);
+
+INSERT INTO public.featurev ( productvid, title, rating ) VALUES (
+    17,
+    'features',
+    5.0
+);
+
+-- ENTRY PRODUCT 18
+
+INSERT INTO public.productv ( seller, rating, user_rating, tag, tag_title, category, category_link, similar_item ) VALUES (
+    'Boba Fett',
+    5.0,
+    34,
+    false,
+    '#1 Best Seller',
+    'toaster stuff',
+    '/toaster_stuff',
+    'https://iruntheinternet.com/lulzdump/images/funny-toaster-car-bannana-freeway-13691638463.jpg'
+);
+
+--PRODUCT 18 SELECTION 1 DEFAULT (45)
+
+INSERT INTO public.selector ( productvid, title, type_selector, selector_num, price,shipping,
+            ship_price, discount, list_price, about_item, selector_text,selector_img, isdefault,
+            instock, message, lowstock_message, shipping_message, type_title ) VALUES (
+    18,
+    'Cuisinart Brushed Compact Toaster (CPT-160)',
+    0,
+    0,
+    30.00,
+    true,
+    7.99,
+    true,
+    32.00,
+    'Luminara umbaran mimbanite tambor keyan whiphid sern.* Woostoid antilles terrik hobbie. Durron abrion momaw monkey-lizard troig teek. Ralter yaka greeata ranat aramandi zabrak nilgaard zuckuss nien.*',
+    '',
+    '',
+    true,
+    43,
+    'Luminara umbaran mimbanite tambor keyan whiphid sern.',
+    'Currently this item is low in stock. Mix it up today!',
+    'shipping is a message. this is a shipping message',
+    ''
+);
+
+INSERT INTO public.detailv ( selectorid, feature, detail )  VALUES (
+    45,
+    'No. slots',
+    '2 slots'
+);
+
+INSERT INTO public.detailv ( selectorid, feature, detail )  VALUES (
+    45,
+    'dimensions',
+    '7-1/2" W x 12" D x 8-1/2" H'
+);
+
+INSERT INTO public.detailv ( selectorid, feature, detail )  VALUES (
+    45,
+    'color',
+    'stainless silver'
+);
+
+INSERT INTO public.featurev ( productvid, title, rating ) VALUES (
+    18,
+    'toasting',
+    4.7
+);
+INSERT INTO public.featurev ( productvid, title, rating ) VALUES (
+    18,
+    'burnt toast',
+    4.9
+);
+INSERT INTO public.featurev ( productvid, title, rating ) VALUES (
+    18,
+    'mobility',
+    5.0
+);
+INSERT INTO public.featurev ( productvid, title, rating ) VALUES (
+    18,
+    'hotness',
+    4.2
+);
+INSERT INTO public.featurev ( productvid, title, rating ) VALUES (
+    18,
+    'popularity',
+    4.2
+);
+
+-- ENTRY PRODUCT 19
+
+INSERT INTO public.productv ( seller, rating, user_rating, tag, tag_title, category, category_link, similar_item ) VALUES (
+    'Sheev Palpatine',
+    5.0,
+    145,
+    true,
+    'Amazins Choice',
+    'toaster stuff',
+    '/toaster_stuff',
+    'https://laughingsquid.com/wp-content/uploads/defibrillator-toaster-20100730-012000.jpg'
+);
+
+--PRODUCT 19 SELECTION 1 DEFAULT (46)
+
+INSERT INTO public.selector ( productvid, title, type_selector, selector_num, price,shipping,
+            ship_price, discount, list_price, about_item, selector_text,selector_img, isdefault,
+            instock, message, lowstock_message, shipping_message, type_title ) VALUES (
+    19,
+    'Cuisinart Countdown Toaster (CPT-415) with 2 slice capacity',
+    2,
+    2,
+    35.00,
+    false,
+    0.00,
+    false,
+    0.00,
+    'Nomi mara xizor dexter argazdan tatooine omas wampa naberrie. Ti yaddle ackbar tarkin. Windu elomin ooryl gamorrean.',
+    '2 slots',
+    'https://images-na.ssl-images-amazon.com/images/I/81Qwfos6ViL._AC_SL1500_.jpg',
+    true,
+    55,
+    'This is a message that is unique. I can promise that. And its attached to this product',
+    'Currently this item is low in stock. Mix it up today!',
+    'shipping is a message. this is a shipping message',
+    'Features Included'
+);
+
+INSERT INTO public.detailv ( selectorid, feature, detail )  VALUES (
+    46,
+    'color',
+    'stainless silver'
+);
+
+INSERT INTO public.detailv ( selectorid, feature, detail )  VALUES (
+    46,
+    'slot number',
+    '2 slices'
+);
+
+INSERT INTO public.detailv ( selectorid, feature, detail )  VALUES (
+    46,
+    'no of dials',
+    '4'
+);
+
+INSERT INTO public.detailv ( selectorid, feature, detail )  VALUES (
+    46,
+    'dimensions',
+    '20.96 x 31.43 x 22.86 cm'
+);
+
+--PRODUCT 19 SELECTION 2 (47)
+
+INSERT INTO public.selector ( productvid, title, type_selector, selector_num, price,shipping,
+            ship_price, discount, list_price, about_item, selector_text,selector_img, isdefault,
+            instock, message, lowstock_message, shipping_message, type_title ) VALUES (
+    19,
+    'Cuisinart Countdown Toaster (CPT-415) with 4 slice capacity',
+    2,
+    2,
+    45.00,
+    false,
+    0.00,
+    false,
+    0.00,
+    'Nomi mara xizor dexter argazdan tatooine omas wampa naberrie. Ti yaddle ackbar tarkin. Windu elomin ooryl gamorrean.',
+    '4 slots',
+    'https://crdms.images.consumerreports.org/f_auto,w_600/prod/products/cr/models/394048-4-slice-toasters-cuisinart-countdown-metal-cpt-435-59288.png',
+    false,
+    43,
+    'This is a message that is unique. I can promise that. And its attached to this product',
+    'Currently this item is low in stock. Mix it up today!',
+    'shipping is a message. this is a shipping message',
+    'Features Included'
+);
+
+INSERT INTO public.detailv ( selectorid, feature, detail )  VALUES (
+    47,
+    'color',
+    'stainless silver'
+);
+
+INSERT INTO public.detailv ( selectorid, feature, detail )  VALUES (
+    47,
+    'slot number',
+    '4 slices'
+);
+
+INSERT INTO public.detailv ( selectorid, feature, detail )  VALUES (
+    47,
+    'no of dials',
+    '8'
+);
+
+INSERT INTO public.detailv ( selectorid, feature, detail )  VALUES (
+    47,
+    'dimensions',
+    '40.96 x 31.43 x 42.86 cm'
+);
+
+
+
+--PRODUCT 19 SELECTION 3 (48)
+
+INSERT INTO public.selector ( productvid, title, type_selector, selector_num, price,shipping,
+            ship_price, discount, list_price, about_item, selector_text,selector_img, isdefault,
+            instock, message, lowstock_message, shipping_message, type_title ) VALUES (
+    19,
+    'Cuisinart Countdown Toaster (CPT-415) with 2 slice capacity and extended cord',
+    2,
+    2,
+    38.00,
+    false,
+    0.00,
+    false,
+    0.00,
+    'Nomi mara xizor dexter argazdan tatooine omas wampa naberrie. Ti yaddle ackbar tarkin. Windu elomin ooryl gamorrean.',
+    '2 slots - extended cord',
+    'https://images-na.ssl-images-amazon.com/images/I/81Qwfos6ViL._AC_SL1500_.jpg',
+    false,
+    36,
+    'This is a message that is unique. I can promise that. And its attached to this product',
+    'Currently this item is low in stock. Mix it up today!',
+    'shipping is a message. this is a shipping message',
+    'Features Included'
+);
+
+INSERT INTO public.detailv ( selectorid, feature, detail )  VALUES (
+    48,
+    'color',
+    'stainless silver'
+);
+
+INSERT INTO public.detailv ( selectorid, feature, detail )  VALUES (
+    48,
+    'slot number',
+    '2 slices'
+);
+
+INSERT INTO public.detailv ( selectorid, feature, detail )  VALUES (
+    48,
+    'no of dials',
+    '4'
+);
+
+INSERT INTO public.detailv ( selectorid, feature, detail )  VALUES (
+    48,
+    'dimensions',
+    '20.96 x 31.43 x 22.86 cm'
+);
+
+
+INSERT INTO public.featurev ( productvid, title, rating ) VALUES (
+    19,
+    'popularity',
+    5.0
+);
+INSERT INTO public.featurev ( productvid, title, rating ) VALUES (
+    19,
+    'hotness',
+    5.0
+);
+
+-- ENTRY PRODUCT 20
+
+INSERT INTO public.productv ( seller, rating, user_rating, tag, tag_title, category, category_link, similar_item ) VALUES (
+    'General Grievous',
+    1.2,
+    145,
+    false,
+    '',
+    'toaster stuff',
+    '/toaster_stuff',
+    'http://www.pmslweb.com/the-blog/wp-content/uploads/2013/10/52-toaster-printer-300x220.jpg'
+);
+
+--PRODUCT 20 SELECTION 1 DEFAULT(49)
+
+INSERT INTO public.selector ( productvid, title, type_selector, selector_num, price,shipping,
+            ship_price, discount, list_price, about_item, selector_text,selector_img, isdefault,
+            instock, message, lowstock_message, shipping_message, type_title ) VALUES (
+    20,
+    'Cuisinart Touch to Toast Leverless Toaster (CPT-420)',
+    1,
+    1,
+    40.00,
+    false,
+    0.00,
+    true,
+    43.00,
+    'X2 rattatak tchuukthai ortolan su miraluka skywalker palpatine aayla. Nikto dagobah sly amanin anthos maximilian sidious trianii. Ansuroer yevetha darth jango moff warrick abregado. Zev wampa tyber tierce wirutid tiin cathar castell.* Ansuroer jodo charal teek kor-uj. Tarpals thisspiasian vurk zann binks baba joh. Moff mace charal sykes darth. Chommell maris onimi antemeridian airen ysanne rahm opress massassi. Phlog boz var rancisis mara yaka solo dash. Himoran k-3po yavin kyp hypori kohl duros rishi endocott.*',
+    'Touch to Toast - Leverless',
+    '',
+    true,
+    6,
+    'This is a message that is unique. I can promise that. And its attached to this product',
+    'Currently this item is low in stock. Mix it up today!',
+    'shipping is a message. this is a shipping message',
+    'Toaster Model'
+);
+
+INSERT INTO public.detailv ( selectorid, feature, detail )  VALUES (
+    49,
+    'slot number',
+    '2 slices'
+);
+
+INSERT INTO public.detailv ( selectorid, feature, detail )  VALUES (
+    49,
+    'special features',
+    'leverless'
+);
+
+INSERT INTO public.detailv ( selectorid, feature, detail )  VALUES (
+    49,
+    'dimensions',
+    '20.96 x 31.43 x 22.86 cm'
+);
+
+--PRODUCT 20 SELECTION 2 (50)
+
+INSERT INTO public.selector ( productvid, title, type_selector, selector_num, price,shipping,
+            ship_price, discount, list_price, about_item, selector_text,selector_img, isdefault,
+            instock, message, lowstock_message, shipping_message, type_title ) VALUES (
+    20,
+    'Cuisinart Touch to Toast With Levers Toaster (CPT-422)',
+    1,
+    1,
+    40.00,
+    true,
+    13.99,
+    true,
+    43.00,
+    'X2 rattatak tchuukthai ortolan su miraluka skywalker palpatine aayla. Nikto dagobah sly amanin anthos maximilian sidious trianii. Ansuroer yevetha darth jango moff warrick abregado. Zev wampa tyber tierce wirutid tiin cathar castell.* Ansuroer jodo charal teek kor-uj. Tarpals thisspiasian vurk zann binks baba joh. Moff mace charal sykes darth. Chommell maris onimi antemeridian airen ysanne rahm opress massassi.*',
+    'Touch to Toast - Lever option',
+    '',
+    false,
+    6,
+    'This is a message that is unique. I can promise that. And its attached to this product',
+    'Currently this item is low in stock. Mix it up today!',
+    'shipping is a message. this is a shipping message',
+    'Toaster Model'
+);
+
+INSERT INTO public.detailv ( selectorid, feature, detail )  VALUES (
+    50,
+    'slot number',
+    '2 slices'
+);
+
+INSERT INTO public.detailv ( selectorid, feature, detail )  VALUES (
+    50,
+    'special features',
+    'leverless with lever options'
+);
+
+INSERT INTO public.detailv ( selectorid, feature, detail )  VALUES (
+    50,
+    'dimensions',
+    '20.96 x 31.43 x 22.86 cm'
+);
+
+--PRODUCT 20 SELECTION 3 (51)
+
+INSERT INTO public.selector ( productvid, title, type_selector, selector_num, price,shipping,
+            ship_price, discount, list_price, about_item, selector_text,selector_img, isdefault,
+            instock, message, lowstock_message, shipping_message, type_title ) VALUES (
+    20,
+    'Cuisinart Alexa Controlled to Toast Leverless Toaster (CPT-424)',
+    1,
+    1,
+    60.00,
+    true,
+    13.99,
+    true,
+    66.00,
+    'X2 rattatak tchuukthai ortolan su miraluka skywalker palpatine aayla. Nikto dagobah sly amanin anthos maximilian sidious trianii. Ansuroer yevetha darth jango moff warrick abregado. Zev wampa tyber tierce wirutid tiin cathar castell. Ansuroer jodo charal teek kor-uj. Tarpals thisspiasian vurk zann binks baba joh. Moff mace charal sykes darth. Chommell maris onimi antemeridian airen ysanne rahm opress massassi. Phlog boz var rancisis mara yaka solo dash. Himoran k-3po yavin kyp hypori kohl duros rishi endocott.*Alexa Included voice commands with manual*',
+    'Voice to Toast with Alexa',
+    '',
+    false,
+    6,
+    'This is a message that is unique. I can promise that. And its attached to this product',
+    'Currently this item is low in stock. Mix it up today!',
+    'shipping is a message. this is a shipping message',
+    'Toaster Model'
+);
+
+INSERT INTO public.detailv ( selectorid, feature, detail )  VALUES (
+    51,
+    'slot number',
+    '2 slices'
+);
+
+INSERT INTO public.detailv ( selectorid, feature, detail )  VALUES (
+    51,
+    'special features',
+    'leverless - voice command options'
+);
+
+INSERT INTO public.detailv ( selectorid, feature, detail )  VALUES (
+    51,
+    'dimensions',
+    '20.96 x 31.43 x 22.86 cm'
+);
+
+INSERT INTO public.featurev ( productvid, title, rating ) VALUES (
+    20,
+    'toasting',
+    4.7
+);
+INSERT INTO public.featurev ( productvid, title, rating ) VALUES (
+    20,
+    'bread factor',
+    4.0
+);
+INSERT INTO public.featurev ( productvid, title, rating ) VALUES (
+    20,
+    'build',
+    4.3
+);
