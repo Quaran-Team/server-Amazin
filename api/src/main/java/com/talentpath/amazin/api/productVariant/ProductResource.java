@@ -33,7 +33,7 @@ public class ProductResource {
     }
 
     @PostMapping("/save")
-    @Query("INSERT INTO productv (seller, rating, user_rating, tag, tag_title, category, category_link, similar_item ) VALUES (:seller, :rating, :user_rating, :tag, :tag_title, :category, :category_link, :similar_item)")
+    @Query("INSERT INTO productv (seller, rating, user_rating, tag, tag_title, category, category_link, similar_item) VALUES (:seller, :rating, :user_rating, :tag, :tag_title, :category, :category_link, :similar_item)")
     public Product createProduct(@RequestBody Product product){
         return productService.save(product);
     }
