@@ -11,7 +11,7 @@ VALUES (
         1,
        'Sheba O.',
        'Too expensive',
-       'Vokalia, Consonantia, mountains, texts',
+       'Vokalia, Consonant, mountains, texts',
        'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
         there live the blind texts.
         Separated they live in Bookmarksgrove right at the coast of the Semantics,
@@ -83,3 +83,4 @@ VALUES (
         2.0,
         'Reviewed in the United States on August 12, 2020'
  );
+
