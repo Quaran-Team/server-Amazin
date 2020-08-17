@@ -25,4 +25,10 @@ public class ComparisonGridResource {
     public ComparisonItem getItemById(@PathVariable("id") long id) {
         return comparisonGridRepo.getOne(id);
     }
+
+    @GetMapping("/products/{category}")
+    public List<ComparisonItem> getItemById(@PathVariable("category") String category) {
+        return comparisonGridRepo.findByCategory(category);
+    }
+
 }
