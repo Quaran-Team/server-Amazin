@@ -51,7 +51,7 @@ before starting the server.
 
 If you get an error command not found MVN you will need to download and install it locally which can be done here: https://maven.apache.org/download.cgi
 
-To see the raw Json (like in the pictures) while the server is running visit "http://localhost:8080/api/v1/items" or "http://localhost:8080/api/v1/totalstars/"
+To see the raw Json while the server is running visit "http://localhost:8080/api/v1/items" or "http://localhost:8080/api/v1/totalstars/"
 
 
 
