@@ -27,7 +27,7 @@ import org.hibernate.annotations.DynamicInsert;
 @JsonIgnoreProperties({ "hibernateLazyInitializer", "handler" })
 public class ComparisonItem {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column (name="itemid")
     private long itemId;
 
@@ -50,11 +50,15 @@ public class ComparisonItem {
     private String itemSound;
 
     @Column (name="itemcategory")
-    private String itemCategory;
+    private String category;
 
     @Column (name="itempower")
     private String itemPower;
 
     @Column (name="itemcapacity")
     private String itemCapacity;
+    
+    @Column (name="itemmode")
+    private String itemMode;
+    
 }
