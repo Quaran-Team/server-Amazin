@@ -30,7 +30,7 @@ public class CustomerReviews {
     public CustomerReviews(){
     }
 
-    public CustomerReviews(long id, Long itemid, String reviewer, String reviewTitle, String reviewTag, String reviewBody, Float rating, String date){
+    public CustomerReviews(long id, long itemid, String reviewer, String reviewTitle, String reviewTag, String reviewBody, Float rating, String date){
         super();
         this.id = id;
         this.reviewer = reviewer;
